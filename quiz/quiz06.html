@@ -33,7 +33,7 @@
     <!-- //main -->
 
     <footer id="footer">
-        <a href="mailto:an83690880@gmail.com">an83690880@gmail.com</a>
+        <a href="mailto:webstoyboy@naver.com">webstoyboy@naver.com</a>
     </footer>
     <!-- //footer -->
 
@@ -44,6 +44,7 @@
 
         // 문제 정보
         let quizInfo = [];
+
         // 문제 가져오기
         const fetchQuiz = () => {
             fetch("https://webs9919.github.io/class2024/json/gineungsaJC2005_02.json")
@@ -108,8 +109,8 @@
                                     <span>${quiz.choices[3]}</span>
                                 </label>
                             </div>
-                            <div class="answer">${quiz.answer}</div>
-                            <div class="desc">${quiz.desc}</div>
+                            <div class="answer none">${quiz.answer}</div>
+                            <div class="desc none">${quiz.desc}</div>
                         </div>
                     </div>
                 `)
@@ -155,7 +156,6 @@
         document.addEventListener("DOMContentLoaded", () => {
             fetchQuiz();
         })
-
     </script>
 </body>
 

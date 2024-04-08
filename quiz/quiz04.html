@@ -32,7 +32,7 @@
     <!-- //main -->
 
     <footer id="footer">
-        <a href="mailto:an83690880@gmail.com">an83690880@gmail.com</a>
+        <a href="mailto:webstoyboy@naver.com">webstoyboy@naver.com</a>
     </footer>
     <!-- //footer -->
 
@@ -128,19 +128,19 @@
                         <div class="quiz__main">
                             <div class="question">${index + 1}. ${quiz.question}</div>
                             <div class="choices">
-                                <label class="" for="choice${index}-1">
+                                <label for="choice${index}-1">
                                     <input type="radio" id="choice${index}-1" name="choice-${index}" value="1">
                                     <span>${quiz.choices[1]}</span>
                                 </label>
-                                <label class="" for="choice${index}-2">
+                                <label for="choice${index}-2">
                                     <input type="radio" id="choice${index}-2" name="choice-${index}" value="2">
                                     <span>${quiz.choices[2]}</span>
                                 </label>
-                                <label class="" for="choice${index}-3">
+                                <label for="choice${index}-3">
                                     <input type="radio" id="choice${index}-3" name="choice-${index}" value="3">
                                     <span>${quiz.choices[3]}</span>
                                 </label>
-                                <label class="" for="choice${index}-4">
+                                <label for="choice${index}-4">
                                     <input type="radio" id="choice${index}-4" name="choice-${index}" value="4">
                                     <span>${quiz.choices[4]}</span>
                                 </label>
@@ -165,23 +165,19 @@
             const answerElement = quizWrap.querySelectorAll(".answer")[index];
             const descElement = quizWrap.querySelectorAll(".desc")[index];
             const confirmElement = quizWrap.querySelectorAll(".confirm")[index];
-            quizElement.classList.remove("good", "bad");
 
-            if (quizChecked.length > 0) {  // 사용자가 체크한 것
+            if (quizChecked.length > 0) {     // 사용자가 체크한것
                 const userAnswer = quizChecked[0].value;
                 if (userAnswer === quizInfo[index].answer) {
-                    quizElement.classList.add("good");  // o 표시
-                    descElement.classList.remove("none");  // o 표시
+                    quizElement.classList.add("good");          // O 표시
                 } else {
-                    quizElement.classList.add("bad");  // x 표시
-                    answerElement.classList.remove("none");  // 해설보기
-                    descElement.classList.remove("none");  // x 표시
+                    quizElement.classList.add("bad");           // X 표시
+                    answerElement.classList.remove("none");     // 정답 보기
                 }
-                confirmElement.classList.add("none")  // 정답 버튼 삭제
-                confirmElement.style
-
+                descElement.classList.remove("none");       // 해설 보기
+                confirmElement.style.display = "none";      // 정답 확인 버튼 숨기기
             } else {
-                alert("보기를 선택해주세요!!");
+                alert("보기를 선택해주세요!! 😎");
             }
         }
 

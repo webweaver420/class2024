@@ -383,9 +383,8 @@ body::after {
 
 .quiz__check {
     position: fixed;
-    z-index: 100;
-    bottom: 20px;
     right: 20px;
+    bottom: 20px;
     width: 100px;
     height: 100px;
     line-height: 94px;
@@ -393,13 +392,13 @@ body::after {
     background-color: #412E91;
     color: #fff;
     cursor: pointer;
-    border-radius: 100%;
-    border: 3px solid #B8A8FF;
-    transition: all 0.3s ease;
+    border-radius: 50%;
+    border: 3px solid #b8a8ff;
+    transition: all 0.3s;
 }
 
 .quiz__check:hover {
     border: 3px solid #412E91;
-    background-color: #E6E0FF;
+    background-color: #e6e0ff;
     color: #412E91;
 }
