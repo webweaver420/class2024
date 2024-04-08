@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>b-4</title>
+   <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #wrap {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    #header {
+        width: 100%;
+        display: flex;
+    }
+
+    #header #logo {
+        width: 20%;
+        height: 100px;
+        background-color: #e9e9e9;
+    }
+
+    #header #nav {
+        width: 80%;
+        height: 100px;
+        background-color: #ededed;
+    }
+
+    #slider {
+        width: 100%;
+        height: 300px;
+        background-color: #d9d9d9;
+    }
+
+    #contents {
+        width: 100%;
+        display: flex;
+    }
+
+    #contents .notice {
+        width: 33.3333%;
+        height: 200px;
+        background-color: #c7c7c7;
+    }
+
+    #contents .gallery {
+        width: 33.3333%;
+        height: 200px;
+        background-color: #c6c0c0;
+    }
+
+    #contents .link {
+        width: 33.3333%;
+        height: 200px;
+        background-color: #cbc7c7;
+    }
+
+    #footer {
+       width: 100%;
+       display: flex;
+    }
+
+    #footer .footer1 {
+        width: 80%;
+       
+    }
+
+    #footer .footer1 .footer1-1 {
+        width: 100%;
+        height: 50px;
+        background-color: #b1b1b1;
+    }
+    
+    #footer .footer1 .footer1-2 {
+        width: 100%;
+        height: 50px;
+        background-color: #b3aeae;
+    }
+
+    #footer .footer2 {
+        width: 20%;
+        height: 100px;
+        background-color: #bcbcbc;
+    }
+   </style>
+</head>
+<body>
+    <div id="wrap">
+       <header id="header">
+        <h1 id="logo"></h1>
+        <nav id="nav"></nav>
+       </header> 
+       <!-- //header -->
+       <article id="slider"></article>
+       <!-- //slider -->
+       <main id="contents">
+        <section class="notice"></section>
+        <section class="gallery"></section>
+        <section class="link"></section>
+       </main>
+       <!-- //contents -->
+       <footer id="footer">
+        <div class="footer1">
+            <div class="footer1-1"></div>
+            <div class="footer1-2"></div>
+        </div>        
+        <div class="footer2"></div>
+       </footer>
+       <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

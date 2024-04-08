@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySQL</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>
+            <a href="index.html">MySQL</a>
+        </h1>
+        <nav>
+            <ul>
+                <li class="active"><a href="mysql01.html">MySQL</a></li>
+                <li><a href="mysql02.html">SQL 개념</a></li>
+                <li><a href="mysql03.html">데이터 베이스</a></li>
+                <li><a href="mysql04.html">테이블</a></li>
+                <li><a href="mysql05.html">SELECT</a></li>
+                <li><a href="mysql06.html">ALTER</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="main__sample container">
+            <div id="sample01" class="sample">
+                <h3>MySQL</h3>
+                <p class="strong">MySQL은 오픈 소스의 관계형 데이터베이스 관리 시스템(RDBMS)입니다.</p>
+
+                <P> MySQL은 다중 사용자 및 다중 스레드를 지원하는 관계형 데이터베이스 관리 시스템(RDBMS)으로, 데이터의 안정성과 보안성을 제공합니다. 대부분의 운영체제에서 작동하며, 웹
+                    애플리케이션 개발, 데이터 분석, 빅 데이터, 클라우드 기반 애플리케이션 등 다양한 분야에서 널리 사용되고 있습니다.
+                    사용이 쉽고 확장성이 높아서 많은 개발자들이 선호하는 데이터베이스 시스템 중 하나로 MySQL은 SQL(Structured Query Language)을 사용하여 데이터를
+                    관리하는데 이는 데이터베이스에
+                    저장된 데이터를 조작하기 위한 표준적인 언어로서, 데이터를 검색, 조작, 정의하는 데 사용되는 선언형 언어입니다. SQL문을 통해 사용자는 어떤 데이터를 원하는지를 기술하고,
+                    데이터베이스 시스템은 이를 처리하는 방법을 결정합니다.
+                </P>
+
+            </div>
+
+            <div id="sample02" class="sample">
+                <h3>MySQL 설치</h3>
+                <div class="info">
+                    <p> MAMP는 macOS에서 웹 사이트를 개발할 때 사용되는 솔루션 스택으로, macOS (M), Apache (A), MySQL (M), PHP (P)의 약어입니다. 이는 웹
+                        개발을 위한 환경을 편리하게 설정하고 운영할 수 있는 도구로, 개발자들이 로컬 환경에서 웹 애플리케이션을 개발, 테스트 및 디버깅할 때 유용하게 사용됩니다. MAMP를
+                        사용하면 개발자들은 자신의 컴퓨터에서 Apache 웹 서버, MySQL 데이터베이스 서버, 그리고 PHP를 실행할 수 있습니다. 이를 통해 웹 개발 프로세스를 효율적으로
+                        관리하고 개발 환경을 손쉽게 구축할 수 있습니다.</p>
+                    <a href="https://www.mamp.info/en/downloads/">https://www.mamp.info/en/downloads/</a>
+                </div>
+            </div>
+
+            <div id="sample03" class="sample">
+                <h3>MySQL 실행</h3>
+                <p>MySQL 서비스를 시작하려면 터미널 또는 명령 프롬프트를 통해 실행합니다.</p>
+                <div class="info">
+                    <p>윈도우 : cd MAMP/bin/mysql/bin (cd c:\MAMP\bin\mysql\bin)</p>
+                    <p>로그인 : mysql -uroot -proot</p>
+                </div>
+                <pre><code class="language-js">mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 4
+Server version: 5.7.24 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.</code></pre>
+                <div class="info">
+                    <p>맥 : cd /Applications/MAMP/Library/bin</p>
+                    <p>로그인 : ./mysql -uroot -proot</p>
+                </div>
+                <pre><code class="language-js">Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 400
+Server version: 5.7.39 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.</code></pre>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:an83690880@gmail.com">an83690880@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="assets/js/prism.js"></script>
+</body>
+
+</html>

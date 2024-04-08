@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #herder {
+            height: 100px;
+        }
+
+        #herder .container .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #e29b9b;
+        }
+
+        #herder .container .menu {
+            width: 80%;
+            height: 100px;
+            background-color: #f5c5c5
+        }
+
+        #slider {
+            height: 300px;
+            background-color: #fff;
+        }
+
+        #slider .container .slider1 {
+            width: 50%;
+            height: 300px;
+            background-color: #f5c5c5;
+        }
+
+        #slider .container .slider2 {
+            width: 50%;
+        }
+
+        #slider .container .slider2 .slider2-1 {
+            height: 150px;
+            background-color: #a74b4b;
+        }
+
+        #slider .container .slider2 .slider2-2 {
+            height: 150px;
+            background-color: #863b3b;
+        }
+
+        #contents {
+            height: 200px;
+            background-color: #f2f2f2;
+        }
+
+        #contents .container .contents1 {
+            width: 33.3333%;
+            background-color: #c09494;
+        }
+
+        #contents .container .contents2 {
+            width: 33.3333%;
+            background-color: #a78181;
+        }
+
+        #contents .container .contents3 {
+            width: 33.3333%;
+            background-color: #755b5b;
+        }
+
+        #footer {
+            height: 100px;
+            background-color: #e3e3e3;
+        }
+
+        #footer .container .footer1 {
+            width: 20%;
+            background-color: #523e3e;
+        }
+
+        #footer .container .footer2 {
+            width: 60%;
+            background-color: #312626;
+        }
+
+        #footer .container .footer3 {
+            width: 20%;
+            background-color: #030303;
+        }
+
+        .container {
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            background-color: #0000001e;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <herder id="herder">
+            <div class="container">
+                <h1 class="logo"></h1>
+                <nav class="menu"></nav>
+            </div>
+        </herder>
+        <!-- //herder -->
+
+        <article id="slider">
+            <div class="container">
+                <div class="slider1"></div>
+                <div class="slider2">
+                    <div class="slider2-1"></div>
+                    <div class="slider2-2"></div>
+                </div>
+            </div>
+        </article>
+        <!-- //article  -->
+
+        <main id="contents">
+            <div class="container">
+                <div class="contents1">1</div>
+                <div class="contents2">2</div>
+                <div class="contents3">3</div>
+            </div>
+        </main>
+        <!-- //contents -->
+
+        <footer id="footer">
+            <div class="container">
+                <div class="footer1">1</div>
+                <div class="footer2">2</div>
+                <div class="footer3">3</div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
