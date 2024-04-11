@@ -28,7 +28,7 @@
             width: 100%;
             height: 100vh;
             overflow: hidden;
-            background: linear-gradient(to bottom, #8e5361, #300e14, #0b0e13);
+            background: linear-gradient(to bottom, #4f0819fc, #04133d, #121514);
         }
 
         main {
@@ -132,11 +132,11 @@
         const ambientLight = new THREE.AmbientLight(0x999999);
         scene.add(ambientLight)
         const lights = [];
-        lights[0] = new THREE.DirectionalLight(0xff0000, 0.3);
+        lights[0] = new THREE.DirectionalLight(0xff0000, 0.1);
         lights[0].position.set(1, 0, 0);
-        lights[1] = new THREE.DirectionalLight(0xff0000, 0.3);
+        lights[1] = new THREE.DirectionalLight(0xff0000, 0.1);
         lights[1].position.set(0.75, 1, 0.5);
-        lights[2] = new THREE.DirectionalLight(0xff0000, 0.3);
+        lights[2] = new THREE.DirectionalLight(0xff0000, 0.1);
         lights[2].position.set(-0.75, -1, 0.5);
         scene.add(lights[0])
         scene.add(lights[1])

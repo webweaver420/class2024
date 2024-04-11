@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈과제</title>
+    <link rel="stylesheet" href="./assets/css/c_quiz.css">
+</head>
+
+<body>
+    <main id="main">
+        <div class="quiz__wrap">
+
+        </div>
+    </main>
+    <!-- //main -->
+
+    <script>
+        // 선택자 
+        const quizWrap = document.querySelector(".quiz__wrap");
+
+        // 변수
+        let currentIndex = 0;   // 현재 문제에 대한 값
+        let goodNum = 0;
+        let badNum = 0;
+
+        // 문제 정보
+        let quizInfo = [];   // quizInfo 배열은 퀴즈 정보를 저장, 처음에는 빈 배열로 초기화되고, 퀴즈 데이터를 가져와서 이 배열에 저장함
+        const fetchQuiz = () => {   // fetchQuiz 함수는 외부 JSON 파일에서 퀴즈 데이터를 가져와서 처리
+            fetch("https://webstoryboy.github.io/webstoryboy/w_json/gineungsaShort.json")
+                .then(res => res.json())
+                .then(items => {
+                    // console.log(items);
+                    quizInfo = items.map(item => {
+
+                        // 문제 정보 재할당
+                        const formattedQuiz = {
+                            date: item.time,
+                            question: item.question,
+                            desc: item.question_desc,
+                            answer: item.correct_answer,
+                        }
+
+                        // 결과값 출력
+                        return formattedQuiz;
+                    });
+
+                    // 문제 출력
+                    quizInfo.splice(99, 69);
+                    // quizInfo.splice(5, 178);
+                    console.log(quizInfo);
+                    updateQuiz(currentIndex);
+                })
+        }
+
+        // 문제 출력 
+        const updateQuiz = (index) => {
+            let quizWrapTag = `<div class="quiz">
+                <div class="quiz__header">
+                    <span>${quizInfo.length}문제 중 ${index + 1}문제입니다.</span>
+                    ${quizInfo[index].date}</div>                                 
+               
+                <div class="quiz__main">
+                    <div class="question"><span>${quizInfo[index].question}</span></div> 
+                    <div class="desc">${quizInfo[index].desc}</div>                      
+                    <div class="input">
+                        <input id="input" type="text" placeholder="정답을 입력해주세요!">                                           
+                    </div>
+                    <div class="answer none">${quizInfo[index].answer}</div>
+                    <div class="desc none"></div>
+                </div>
+                <div class="quiz__footer">
+                    <button class="confirm">정답 확인하기</button>  
+                    <button class="next none">다음 문제</button>                 
+                </div>
+            </div>
+            `;
+
+            quizWrap.innerHTML = quizWrapTag;
+            if (quizInfo[index].desc == undefined) {
+                quizWrap.querySelector('.desc').classList.add('none');
+            }
+            // 선택자 
+            const quizConfirm = quizWrap.querySelector(".confirm");
+            const quizNext = quizWrap.querySelector(".next");
+
+            // 정답 버튼을 클릭
+            quizConfirm.addEventListener("click", () => {
+                const quizInput = quizWrap.querySelector("#input"); // 사용자가 클릭한 정답 확인
+                const userAnswer = quizInput.value;               // 사용자가 클릭한 정답
+                if (userAnswer == "") {
+                    alert("보기를 선택해주세요! 🥳");
+
+
+                } else {
+                    const quizAnswer = quizInfo[currentIndex].answer    // 정답지의 정답
+                    const quizElement = quizWrap.querySelector(".quiz");
+                    const answerElement = quizWrap.querySelector(".answer");
+                    // const descElement = quizWrap.querySelector(".desc");
+
+                    if (userAnswer == quizAnswer) {
+                        goodNum++;
+                        quizElement.classList.add('good')
+                    } else {
+                        badNum++;
+                        quizElement.classList.add('bad')
+                        answerElement.classList.remove('none')
+                    }
+
+                    // descElement.classList.remove("none");   // 설명 추가
+                    quizConfirm.classList.add("none");  // 정답 버튼 삭제
+                    quizNext.classList.remove("none");  // 다음 버튼 추가
+
+                }
+            });
+
+            // 다음 문제 버튼을 클릭
+            quizNext.addEventListener("click", () => {
+                if (currentIndex < quizInfo.length - 1) {
+                    currentIndex++;             // 문제 번호 증가
+                    updateQuiz(currentIndex);   // 퀴즈 반영
+                } else {
+                    alert((goodNum + badNum) - badNum + "점 입니다.")
+                }
+            });
+        }
+        fetchQuiz()
+        document.addEventListener("DOMContentLoaded", () => {          // 페이지가 로드된 후 실행     
+            updateQuiz(currentIndex);
+        });
+
+    </script>
+
+</body>
+
+</html>

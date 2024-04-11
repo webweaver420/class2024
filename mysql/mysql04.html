@@ -19,8 +19,8 @@
             <ul>
                 <li><a href="mysql01.html">MySQL</a></li>
                 <li><a href="mysql02.html">SQL 개념</a></li>
-                <li><a href="mysql03.html">데이터베이스</a></li>
-                <li class="active"><a href="mysql04.html">테이블</a></li>
+                <li><a href="mysql03.html">DATABASE</a></li>
+                <li class="active"><a href="mysql04.html">TABLE</a></li>
                 <li><a href="mysql05.html">SELECT</a></li>
                 <li><a href="mysql06.html">ALTER</a></li>
             </ul>
@@ -32,8 +32,7 @@
         <div class="main__sample container">
             <div id="sample01" class="sample">
                 <h3>테이블 만들기</h3>
-                <div class="info">
-                    CREATE TABLE 이름;
+                <div class="info">CREATE TABLE 이름;
                 </div>
                 <pre><code class="language-js">CREATE TABLE members(
 memberID int(10) unsigned auto_increment,
@@ -48,10 +47,9 @@ PRIMARY KEY(memberID)
 
             <div id="sample02" class="sample">
                 <h3>테이블 구조 보기</h3>
-                <div class="info">
-                    DESC 이름;
+                <div class="info">DESC 이름;
                 </div>
-                <pre><code class="language-js">mysql> DESC members;
+                <pre><code class="language-js">mysql>DESC members;
 +----------+------------------+------+-----+---------+----------------+
 | Field    | Type             | Null | Key | Default | Extra          |
 +----------+------------------+------+-----+---------+----------------+
@@ -67,8 +65,7 @@ PRIMARY KEY(memberID)
 
             <div id="sample03" class="sample">
                 <h3>테이블 데이터 입력</h3>
-                <div class="info">
-                    INSERT INTO 테이블 이름(필드명) VALUES(값);
+                <div class="info">INSERT INTO 테이블 이름(필드명) VALUES(값);
                 </div>
                 <pre><code class="language-js">
 INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("황상연", "1234", "33", "990304", "1023958375");
@@ -91,30 +88,27 @@ INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("박진�
 
             <div id="sample04" class="sample">
                 <h3>테이블 삭제</h3>
-                <div class="info">
-                    DROP TABLE 이름;
+                <div class="info">DROP TABLE 이름;
                 </div>
-                <pre><code class="language-js">mysql> DROP TABLE members;
+                <pre><code class="language-js">mysql>DROP TABLE members;
 Query OK, 0 rows affected (0.01 sec)
 </code></pre>
             </div>
 
             <div id="sample05" class="sample">
                 <h3>테이블 초기화</h3>
-                <div class="info">
-                    TRUNCATE TABLE 이름;
+                <div class="info">TRUNCATE TABLE 이름;
                 </div>
-                <pre><code class="language-js">mysql> TRUNCATE TABLE members;
+                <pre><code class="language-js">mysql>TRUNCATE TABLE members;
 Query OK, 0 rows affected (0.01 sec)
 </code></pre>
             </div>
 
             <div id="sample06" class="sample">
                 <h3>테이블 합치기(JOIN)</h3>
-                <div class="info">
-                    SELECT [필드명] FROM [테이블.앨리어스] JOIN [테이블.앨리어스] ON [기준이 되는 조건문]
+                <div class="info">SELECT [필드명] FROM [테이블.앨리어스] JOIN [테이블.앨리어스] ON [기준이 되는 조건문]
                 </div>
-                <pre><code class="language-js">mysql> SELECT m.youName, m.youAge, r.youText, r.regTime FROM members m JOIN reviews r ON (m.memberID = r.memberID);  // 필요한 필드명 적고 앞에m은 멤버스를 지칭
+                <pre><code class="language-js">mysql>SELECT m.youName, m.youAge, r.youText, r.regTime FROM members m JOIN reviews r ON (m.memberID = r.memberID);  // 필요한 필드명 적고 앞에m은 멤버스를 지칭
     +---------+--------+---------------------------------------+------------+
     | youName | youAge | youText                               | regTime    |
     +---------+--------+---------------------------------------+------------+
@@ -200,7 +194,7 @@ INSERT INTO reviews(memberID, youText, regTime) VALUES("1", "대단히 만족스
     <!-- //main -->
 
     <footer id="footer">
-        <a href="an83690880@gmail.com">an83690880@gmail.com</a>
+        <a href="webweaver420@gmail.com">webweaver420@gmail.com</a>
     </footer>
     <!-- //footer -->
 

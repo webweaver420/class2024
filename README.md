@@ -42,10 +42,12 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 
 # vscode 단축키
 설정 : ctrl + ,   
-사이드 바 : ctrl + b 
+찾기 : ctrl + f  
+사이드 바 표시/숨김 : ctrl + b 
 줄 복사 : alt + shift + 화살표  
 다중 선택 : alt + shift + 클릭
 다중 키워드 선택 : ctrl + d
+원하는 곳 선택 : alt + 클릭
 
 
 

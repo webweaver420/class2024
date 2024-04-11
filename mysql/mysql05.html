@@ -19,8 +19,8 @@
             <ul>
                 <li><a href="mysql01.html">MySQL</a></li>
                 <li><a href="mysql02.html">SQL 개념</a></li>
-                <li><a href="mysql03.html">데이터베이스</a></li>
-                <li><a href="mysql04.html">테이블</a></li>
+                <li><a href="mysql03.html">DATABASE</a></li>
+                <li><a href="mysql04.html">TABLE</a></li>
                 <li class="active"><a href="mysql05.html">SELECT</a></li>
                 <li><a href="mysql06.html">ALTER</a></li>
             </ul>
@@ -37,7 +37,7 @@
                 <div class="info">
                     SELECT * FROM members;
                 </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members;
+                <pre><code class="language-js">mysql>SELECT * FROM members;
 +----------+-----------+---------+--------+----------+------------+
 | memberID | youName   | youPass | youAge | youBirth | regTime    |
 +----------+-----------+---------+--------+----------+------------+
@@ -62,7 +62,7 @@
                 <div class="info">
                     SELECT youName FROM members;
                 </div>
-                <pre><code class="language-js">mysql> SELECT youName FROM members;
+                <pre><code class="language-js">mysql>SELECT youName FROM members;
 +-----------+
 | youName   |
 +-----------+
@@ -87,7 +87,7 @@
                 <div class="info">
                     SELECT youName, youAge FROM members;
                 </div>
-                <pre><code class="language-js">mysql> SELECT youName, youAge FROM members3;
+                <pre><code class="language-js">mysql>SELECT youName, youAge FROM members3;
 +-----------+--------+
 | youName   | youAge |
 +-----------+--------+
@@ -114,7 +114,7 @@
                 <div class="info">
                     SELECT * FROM members ORDER By youName DESC;
                 </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members ORDER By youName DESC;
+                <pre><code class="language-js">mysql>SELECT * FROM members ORDER By youName DESC;
 +----------+-----------+---------+--------+----------+------------+
 | memberID | youName   | youPass | youAge | youBirth | regTime    |
 +----------+-----------+---------+--------+----------+------------+
@@ -139,7 +139,7 @@
                 <div class="info">
                     SELECT * FROM members ORDER By youName ASC;
                 </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members ORDER By youName ASC;
+                <pre><code class="language-js">mysql>SELECT * FROM members ORDER By youName ASC;
 +----------+-----------+---------+--------+----------+------------+
 | memberID | youName   | youPass | youAge | youBirth | regTime    |
 +----------+-----------+---------+--------+----------+------------+
@@ -165,7 +165,7 @@
                 <div class="info">
                     SELECT * FROM members ORDER By youAge DESC;
                 </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members ORDER By youAge DESC;
+                <pre><code class="language-js">mysql>SELECT * FROM members ORDER By youAge DESC;
 +----------+-----------+---------+--------+----------+------------+
 | memberID | youName   | youPass | youAge | youBirth | regTime    |
 +----------+-----------+---------+--------+----------+------------+
@@ -191,7 +191,7 @@
                 <div class="info">
                     SELECT * FROM members ORDER By youAge ASC;
                 </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members ORDER By youAge ASC;
+                <pre><code class="language-js">mysql>SELECT * FROM members ORDER By youAge ASC;
 +----------+-----------+---------+--------+----------+------------+
 | memberID | youName   | youPass | youAge | youBirth | regTime    |
 +----------+-----------+---------+--------+----------+------------+
@@ -217,7 +217,7 @@
                 <div class="info">
                     SELECT * FROM members WHERE memberID = 1;
                 </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members WHERE memberID = 1;
+                <pre><code class="language-js">mysql>SELECT * FROM members WHERE memberID = 1;
 +----------+-----------+---------+--------+----------+------------+
 | memberID | youName   | youPass | youAge | youBirth | regTime    |
 +----------+-----------+---------+--------+----------+------------+
@@ -230,7 +230,7 @@
                 <div class="info">
                     SELECT * FROM members WHERE memberID > 10;
                 </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members WHERE memberID > 10;
+                <pre><code class="language-js">mysql>SELECT * FROM members WHERE memberID > 10;
 +----------+-----------+---------+--------+----------+------------+
 | memberID | youName   | youPass | youAge | youBirth | regTime    |
 +----------+-----------+---------+--------+----------+------------+
@@ -245,7 +245,7 @@
                 <h4>memberID가 5보다 크고 10보다 작은 데이터</h4>
                 <div class="info">
                     SELECT * FROM members WHERE memberID &gt; 5 AND memberID &lt; 10; </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members3 WHERE memberID > 5 AND memberID < 10;
+                <pre><code class="language-js">mysql>SELECT * FROM members3 WHERE memberID > 5 AND memberID < 10;
 +----------+-----------+---------+--------+----------+------------+
 | memberID | youName   | youPass | youAge | youBirth | regTime    |
 +----------+-----------+---------+--------+----------+------------+
@@ -261,7 +261,7 @@
                 <div class="info">
                     SELECT * FROM members WHERE memberID IN(1,5,10);
                 </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members WHERE memberID IN(1,5,10);
+                <pre><code class="language-js">mysql>SELECT * FROM members WHERE memberID IN(1,5,10);
 +----------+-----------+---------+--------+----------+------------+
 | memberID | youName   | youPass | youAge | youBirth | regTime    |
 +----------+-----------+---------+--------+----------+------------+
@@ -276,7 +276,7 @@
                 <div class="info">
                     SELECT * FROM members WHERE youAge BETWEEN 30 AND 40;
                 </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members WHERE youAge BETWEEN 30 AND 40;
+                <pre><code class="language-js">mysql>SELECT * FROM members WHERE youAge BETWEEN 30 AND 40;
 +----------+-----------+---------+--------+----------+------------+
 | memberID | youName   | youPass | youAge | youBirth | regTime    |
 +----------+-----------+---------+--------+----------+------------+
@@ -291,7 +291,7 @@
                 <div class="info">
                     SELECT * FROM members WHERE youAge NOT BETWEEN 30 AND 40;
                 </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members WHERE youAge NOT BETWEEN 30 AND 40;
+                <pre><code class="language-js">mysql>SELECT * FROM members WHERE youAge NOT BETWEEN 30 AND 40;
 +----------+-----------+---------+--------+----------+------------+
 | memberID | youName   | youPass | youAge | youBirth | regTime    |
 +----------+-----------+---------+--------+----------+------------+
@@ -313,7 +313,7 @@
                 <div class="info">
                     SELECT * FROM members WHERE youName LIKE '%연%';
                 </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members WHERE youName LIKE '%연%';
+                <pre><code class="language-js">mysql>SELECT * FROM members WHERE youName LIKE '%연%';
 +----------+-----------+---------+--------+----------+------------+
 | memberID | youName   | youPass | youAge | youBirth | regTime    |
 +----------+-----------+---------+--------+----------+------------+
@@ -326,7 +326,7 @@
                 <div class="info">
                     SELECT * FROM members WHERE youName LIKE '김%';
                 </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members WHERE youName LIKE '김%';
+                <pre><code class="language-js">mysql>SELECT * FROM members WHERE youName LIKE '김%';
 +----------+-----------+---------+--------+----------+------------+
 | memberID | youName   | youPass | youAge | youBirth | regTime    |
 +----------+-----------+---------+--------+----------+------------+
@@ -340,7 +340,7 @@
                 <div class="info">
                     SELECT * FROM members WHERE youName LIKE '%현';
                 </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members WHERE youName LIKE '%현';
+                <pre><code class="language-js">mysql>SELECT * FROM members WHERE youName LIKE '%현';
 +----------+-----------+---------+--------+----------+------------+
 | memberID | youName   | youPass | youAge | youBirth | regTime    |
 +----------+-----------+---------+--------+----------+------------+
@@ -352,7 +352,7 @@
                 <div class="info">
                     SELECT * FROM members WHERE youName LIKE '_상_';
                 </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members WHERE youName LIKE '_상_';
+                <pre><code class="language-js">mysql>SELECT * FROM members WHERE youName LIKE '_상_';
 +----------+-----------+---------+--------+----------+------------+
 | memberID | youName   | youPass | youAge | youBirth | regTime    |
 +----------+-----------+---------+--------+----------+------------+
@@ -364,7 +364,7 @@
                 <div class="info">
                     SELECT * FROM members WHERE youName LIKE '김%' OR youName LIKE '이%';
                 </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members WHERE youName LIKE '김%' OR youName LIKE '이%';
+                <pre><code class="language-js">mysql>SELECT * FROM members WHERE youName LIKE '김%' OR youName LIKE '이%';
 +----------+-----------+---------+--------+----------+------------+
 | memberID | youName   | youPass | youAge | youBirth | regTime    |
 +----------+-----------+---------+--------+----------+------------+
@@ -379,7 +379,7 @@
                 <div class="info">
                     SELECT * FROM members LIMIT 5;
                 </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members LIMIT 5;
+                <pre><code class="language-js">mysql>SELECT * FROM members LIMIT 5;
 +----------+---------+---------+--------+----------+------------+
 | memberID | youName | youPass | youAge | youBirth | regTime    |
 +----------+---------+---------+--------+----------+------------+
@@ -395,7 +395,7 @@
                 <div class="info">
                     SELECT * FROM members LIMIT 5, 5;
                 </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members LIMIT 5, 5;
+                <pre><code class="language-js">mysql>SELECT * FROM members LIMIT 5, 5;
 +----------+---------+---------+--------+----------+------------+
 | memberID | youName | youPass | youAge | youBirth | regTime    |
 +----------+---------+---------+--------+----------+------------+
@@ -411,7 +411,7 @@
                 <div class="info">
                     SELECT * FROM members LIMIT 10, 5; // 앞숫자는 시작점, 뒷번호는 갯수를 의미
                 </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members LIMIT 10, 5;
+                <pre><code class="language-js">mysql>SELECT * FROM members LIMIT 10, 5;
 +----------+---------+---------+--------+----------+------------+
 | memberID | youName | youPass | youAge | youBirth | regTime    |
 +----------+---------+---------+--------+----------+------------+
@@ -427,7 +427,7 @@
                 <div class="info">
                     SELECT count(*) FROM members;
                 </div>
-                <pre><code class="language-js">mysql> SELECT count(*) FROM members;
+                <pre><code class="language-js">mysql>SELECT count(*) FROM members;
 +----------+
 | count(*) |
 +----------+
@@ -439,7 +439,7 @@
                 <div class="info">
                     SELECT count(youName) FROM members;
                 </div>
-                <pre><code class="language-js">mysql> SELECT count(youName) FROM members;
+                <pre><code class="language-js">mysql>SELECT count(youName) FROM members;
 +----------------+
 | count(youName) |
 +----------------+
@@ -451,7 +451,7 @@
                 <div class="info">
                     SELECT DISTINCT youAge FROM members;
                 </div>
-                <pre><code class="language-js">mysql> SELECT DISTINCT youAge FROM members;
+                <pre><code class="language-js">mysql>SELECT DISTINCT youAge FROM members;
 +--------+
 | youAge |
 +--------+
@@ -472,7 +472,7 @@
                 <div class="info">
                     SELECT * FROM members WHERE youAge > 25 AND youName LIKE '황%';
                 </div>
-                <pre><code class="language-js">mysql> SELECT * FROM members WHERE youAge > 25 AND youName LIKE '황%';
+                <pre><code class="language-js">mysql>SELECT * FROM members WHERE youAge > 25 AND youName LIKE '황%';
 +----------+---------+---------+--------+----------+------------+
 | memberID | youName | youPass | youAge | youBirth | regTime    |
 +----------+---------+---------+--------+----------+------------+
@@ -485,7 +485,7 @@
                 <div class="info">
                     SELECT * FROM members WHERE youAge >= 30 AND memberID IN(2,15);
                 </div>
-                <pre><code class="language-js"> SELECT * FROM members WHERE youAge >= 30 AND memberID IN(2,15);
+                <pre><code class="language-js">SELECT * FROM members WHERE youAge >= 30 AND memberID IN(2,15);
 +----------+---------+---------+--------+----------+------------+
 | memberID | youName | youPass | youAge | youBirth | regTime    |
 +----------+---------+---------+--------+----------+------------+
@@ -498,7 +498,7 @@
     <!-- //main -->
 
     <footer id="footer">
-        <a href="an83690880@gmail.com">an83690880@gmail.com</a>
+        <a href="webweaver420@gmail.com">webweaver420@gmail.com</a>
     </footer>
     <!-- //footer -->
 
