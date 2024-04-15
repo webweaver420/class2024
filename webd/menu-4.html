@@ -11,6 +11,15 @@
             padding: 0;
         }
 
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
         #wrap {
             width: 1200px;
             margin: 0 auto;
@@ -95,28 +104,16 @@
 
         nav>ul {}
 
-        nav>ul>li {
-            position: relative;
-        }
+        nav>ul>li {}
 
         nav>ul>li>a {
-            padding: 10px;
             display: block;
+            padding: 10px;
+            background-color: #c1c1c1;
             text-align: center;
-            background-color: #ccc;
         }
 
-        nav>ul>li>a:hover {
-            background-color: #dbdbdb;
-        }
-
-        nav>ul>li>ul {
-            position: absolute;
-            right: -20;
-            top: 0;
-            width: 200px;
-            background-color: #6d6d6d;
-        }
+        nav>ul>li>ul {}
 
         nav>ul>li>ul>li {}
 
@@ -130,16 +127,16 @@
             <h1 class="logo"></h1>
             <nav class="nav">
                 <ul>
-                    <li><a href="#">menu</a>
-                        <ul>
+                    <li><a href="#">menu1</a>
+                        <ul class="submenu">
                             <li><a href="#">submenu1-1</a></li>
                             <li><a href="#">submenu1-2</a></li>
                             <li><a href="#">submenu1-3</a></li>
                             <li><a href="#">submenu1-4</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">menu</a>
-                        <ul>
+                    <li><a href="#">menu2</a>
+                        <ul class="submenu">
                             <li><a href="#">submenu2-1</a></li>
                             <li><a href="#">submenu2-2</a></li>
                             <li><a href="#">submenu2-3</a></li>
@@ -147,7 +144,7 @@
                         </ul>
                     </li>
                     <li><a href="#">menu3</a>
-                        <ul>
+                        <ul class="submenu">
                             <li><a href="#">submenu3-1</a></li>
                             <li><a href="#">submenu3-2</a></li>
                             <li><a href="#">submenu3-3</a></li>
@@ -155,7 +152,7 @@
                         </ul>
                     </li>
                     <li><a href="#">menu4</a>
-                        <ul>
+                        <ul class="submenu">
                             <li><a href="#">submenu4-1</a></li>
                             <li><a href="#">submenu4-2</a></li>
                             <li><a href="#">submenu4-3</a></li>
@@ -185,6 +182,13 @@
         <!-- //footer -->
     </div>
     <!-- //wrap -->
+    <script>
+        $(".nav>ul>li").mouseover(function () {
+            $(this).find(".submenu").stop().slideDown();
+        });
+
+
+    </script>
 </body>
 
 </html>
