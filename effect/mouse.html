@@ -36,8 +36,7 @@
         .main__inner p i,
         .main__inner p strong {
             font-style: normal;
-            font-weight: 900;
-            font-size: 45px;
+            font-weight: 700;
         }
 
         .main__info {
@@ -74,6 +73,11 @@
             z-index: 100000;
             user-select: none;
             pointer-events: none;
+            transition:
+                transform 0.5s,
+                background-color 0.3s,
+                border 0.3s,
+                border-radius 0.3s;
         }
 
         .cursor::before {
@@ -97,6 +101,74 @@
             top: 50%;
             transform: translate(-50%, -50%);
         }
+
+        .cursor.span1 {
+            background-color: #b6323243;
+            border: 1px solid #b6323243;
+            transform: scale(0.5);
+            transition: opacity 0.3s ease;
+        }
+
+        .cursor.span1::after {
+            background-color: #32b66243;
+        }
+
+        .cursor.span1::before {
+            background-color: rgba(87, 248, 62, 0.263);
+
+        }
+
+        .cursor.span2 {
+            background-color: #ee671843;
+            border: 1px solid #ee671843;
+            transform: scale(0.5);
+        }
+
+        .cursor.span2:hover {
+            font-size: 2.6vmax;
+            transition: font-size 0.3s ease;
+        }
+
+        .cursor.span2::after {
+            background-color: #a9525243;
+        }
+
+        .cursor.span2::before {
+            background-color: #f74c4c43;
+        }
+
+        .cursor.span3 {
+            background-color: rgba(163, 18, 163, 0.347);
+            border: 1px solid #fd575720;
+            border-radius: 50%;
+            transform: rotate(720deg) scale(3);
+        }
+
+        .cursor.span3::after {
+            background-color: #f74c4c43;
+
+        }
+
+        .cursor.span3::before {
+            background-color: #f74c4c43;
+
+        }
+
+        .cursor.span4 {
+            background-color: #e04b4b43;
+            border: 1px solid #fd575720;
+            transform: rotate(360deg) scale(1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .cursor.span4::after {
+            background-color: #f74c4c43;
+
+        }
+
+        .cursor.span4::before {
+            background-color: #f74c4c43;
+        }
     </style>
 </head>
 
@@ -111,12 +183,12 @@
         <main id="main">
             <div class="cursor"></div>
             <div class="main__inner">
-                <p> JavaScript is a versatile <em>programming</em> language that powers the dynamic behavior on most
+                <p> JavaScript is a versatile <span>programming</span> language that powers the dynamic behavior on most
                     websites. It
                     was originally developed by Netscape as a means to add interactive elements to browsers, and has
-                    since become a <span>fundamental</span>component of web development. <i>JavaScript</i> enables
+                    since become a <span>fundamental</span>component of web development. <span>JavaScript</span> enables
                     developers to implement
-                    complex features, from displaying timely content updates to <strong>interactive</strong> maps and
+                    complex features, from displaying timely content updates to <span>interactive</span> maps and
                     animated 2D/3D
                     graphics.</p>
             </div>
@@ -161,8 +233,37 @@
 
         window.addEventListener("mousemove", function (e) {
             cursor.style.left = e.clientX - 50 + "px";
-            cursor.style.top = e.clientY + "px";
+            cursor.style.top = e.clientY - 50 + "px";
         });
+
+        document.querySelector(".main__inner p span:nth-child(1)").addEventListener("mouseover", function () {
+            cursor.classList.add("span1");
+        });
+
+
+        document.querySelector(".main__inner p span:nth-child(1)").addEventListener("mouseout", function () {
+            cursor.classList.remove("span1");
+        });
+        document.querySelector(".main__inner p span:nth-child(2)").addEventListener("mouseover", function () {
+            cursor.classList.add("span2");
+        });
+        document.querySelector(".main__inner p span:nth-child(2)").addEventListener("mouseout", function () {
+            cursor.classList.remove("span2");
+        });
+        document.querySelector(".main__inner p span:nth-child(3)").addEventListener("mouseover", function () {
+            cursor.classList.add("span3");
+        });
+        document.querySelector(".main__inner p span:nth-child(3)").addEventListener("mouseout", function () {
+            cursor.classList.remove("span3");
+        });
+        document.querySelector(".main__inner p span:nth-child(4)").addEventListener("mouseover", function () {
+            cursor.classList.add("span4");
+        });
+        document.querySelector(".main__inner p span:nth-child(4)").addEventListener("mouseout", function () {
+            cursor.classList.remove("span4");
+        });
+
+
     </script>
 </body>
 
