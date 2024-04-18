@@ -5,7 +5,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mouse Effect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            cursor: none;
+        }
+
+        .main__inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main__inner p {
+            color: #d2d2d2;
+            padding: 10vw;
+            font-size: 2.4vmax;
+            text-align: center;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 300;
+        }
+
+        .main__inner p em,
+        .main__inner p span,
+        .main__inner p i,
+        .main__inner p strong {
+            font-style: normal;
+            font-weight: 900;
+
+        }
+
+        .main__info {
+            position: absolute;
+            left: 16px;
+            top: 83px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .main__info ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .main__info ul li {
+            width: 25%;
+            text-transform: uppercase;
+            font-family: 'Montserrat';
+            color: #dbdbdb;
+            font-weight: 200;
+        }
+
+        .cursor {
+            width: 100px;
+            height: 100px;
+            background-color: #ffffff2a;
+            border: 1px solid #ffffff1f;
+            backdrop-filter: blur(5px);
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            border-radius: 50%;
+            z-index: 100000;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .cursor::before {
+            content: '';
+            width: 20px;
+            height: 1px;
+            background-color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .cursor::after {
+            content: '';
+            width: 1px;
+            height: 20px;
+            background-color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 
 <body>
@@ -17,7 +109,24 @@
         </header>
         <!-- //header -->
         <main id="main">
+            <div class="cursor"></div>
             <div class="main__inner">
+                <p> JavaScript is a versatile <em>programming</em> language that powers the dynamic behavior on most
+                    websites. It
+                    was originally developed by Netscape as a means to add interactive elements to browsers, and has
+                    since become a <span>fundamental</span>component of web development. <i>JavaScript</i> enables
+                    developers to implement
+                    complex features, from displaying timely content updates to <strong>interactive</strong> maps and
+                    animated 2D/3D
+                    graphics.</p>
+            </div>
+            <div class="main__info">
+                <ul>
+                    <li>clientX <span class="clientX">0</span></li>
+                    <li>offsetX <span class="offsetX">0</span></li>
+                    <li>pageX <span class="pageX">0</span></li>
+                    <li>screenX <span class="screenX">0</span></li>
+                </ul>
             </div>
         </main>
         <!-- //main -->
@@ -37,6 +146,24 @@
     </div>
     <!-- //wrap -->
 
+    <script>
+        // info
+        window.addEventListener("mousemove", function (event) {
+            console.log(event);
+            document.querySelector(".clientX").innerText = event.clientX;
+            document.querySelector(".offsetX").innerText = event.offsetX;
+            document.querySelector(".pageX").innerText = event.pageX;
+            document.querySelector(".screenX").innerText = event.screenX;
+        });
+
+        // mouse
+        const cursor = document.querySelector(".cursor");
+
+        window.addEventListener("mousemove", function (e) {
+            cursor.style.left = e.clientX - 50 + "px";
+            cursor.style.top = e.clientY + "px";
+        });
+    </script>
 </body>
 
 </html>

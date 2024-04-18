@@ -224,6 +224,18 @@ li {
     color: #666;
 }
 
+/* 메인 메뉴 */
+.main__menu {
+    padding: 40px 0;
+    border-bottom: 1px dashed #dcdcdc;
+}
+
+.main__menu h2 {
+    font-size: 20px;
+    font-family: 'G';
+
+}
+
 /* 푸터 */
 #footer {
     height: 400px;
