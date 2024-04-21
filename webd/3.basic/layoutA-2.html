@@ -24,42 +24,42 @@
         #header .logo {
             width: 20%;
             height: 100px;
-            background-color: #efefef;
+            background-color: #ddd;
         }
 
         #header .nav {
             width: 80%;
             height: 100px;
-            background-color: #e3e3e3;
+            background-color: #d9d9d9;
         }
 
         #slider {
             width: 100%;
             height: 300px;
-            background-color: #e3e3e3;
+            background-color: #ccc;
         }
 
-        #contents {
+        #main {
             width: 100%;
             display: flex;
         }
 
-        #contents .content1 {
+        #main .content1 {
             width: 33.3333%;
             height: 200px;
-            background-color: #d1d1d1;
+            background-color: #b9b9b9;
         }
 
-        #contents .content2 {
+        #main .content2 {
             width: 33.3333%;
             height: 200px;
-            background-color: #c7c7c7;
+            background-color: #b5b5b5;
         }
 
-        #contents .content3 {
+        #main .content3 {
             width: 33.3333%;
             height: 200px;
-            background-color: #bcbcbc;
+            background-color: #b3b3b3;
         }
 
         #footer {
@@ -70,7 +70,7 @@
         #footer .footer1 {
             width: 20%;
             height: 100px;
-            background-color: #b1b1b1;
+            background-color: #aaa;
         }
 
         #footer .footer2 {
@@ -82,34 +82,33 @@
         #footer .footer3 {
             width: 20%;
             height: 100px;
-            background-color: #9d9d9d;
+            background-color: #a9a9a9;
         }
     </style>
 </head>
 
 <body>
     <div id="wrap">
-        <herder id="herder">
-            <div class="logo"></div>
-            <div class="nav"></div>
-        </herder>
-        <!-- //herder -->
-        <article id="slider"></article>
+        <header id="header">
+            <h1 class="logo"></h1>
+            <nav class="nav"></nav>
+        </header>
+        <!-- //header -->
+        <article id="slider">
+
+        </article>
         <!-- //slider -->
-
-        <main id="contents">
-            <div class="content1"></div>
-            <div class="content2"></div>
-            <div class="content3"></div>
+        <main id="main">
+            <section class="content1"></section>
+            <section class="content2"></section>
+            <section class="content3"></section>
         </main>
-        <!-- //contents -->
-
+        <!-- //main -->
         <footer id="footer">
             <div class="footer1"></div>
             <div class="footer2"></div>
             <div class="footer3"></div>
         </footer>
-        <!-- //footer -->
     </div>
 </body>
 
