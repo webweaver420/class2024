@@ -4,40 +4,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>E-2</title>
   <style>
-    body {
-      font-size: 2em;
+    * {
+      margin: 0;
+      padding: 0;
     }
 
-    div {
-      display: block;
-      width: 300px;
-      height: 200px;
-      background-color: red;
+    #wrap {
+      width: 100%;
+      /* display: flex; */
     }
 
-    span {
-      display: inline-block;
-      width: 300px;
-      height: 200px;
-      background-color: blue;
+    #main {
+      width: 100%;
+      height: 750px;
+      background-color: #e9e9e9;
+      display: flex;
+    }
+
+    #header {
+      width: 200px;
+      height: 100%;
+      background-color: #d9d9d9;
+    }
+
+    #header .logo {
+      width: 100%;
+      height: 20%;
+      background-color: #d9d9d9;
+
+    }
+
+    #header .nav {
+      width: 100%;
+      height: 80%;
+      background-color: #d3d3d3;
+    }
+
+    #contents {
+      width: 400px;
+      height: 100%;
+      background-color: #c7c7c7;
+    }
+
+    #slider {
+      width: calc(100% - 600px);
+      height: 100%;
+      background-color: #bfbfbf;
+    }
+
+    #footer {
+      width: 100%;
+      height: 100px;
+      background-color: #d1d1d1;
     }
   </style>
 </head>
 
 <body>
-  <div>
-    <section class="item item-a">
-      <p>You've got a friend in me
-        You've got a friend in me
-        When the road looks rough ahead
-        And you're miles and miles from your nice warm bed
-        You just remember what your old pal said
-        Boy, you've got a friend in me</p>
-    </section>
+  <div id="wrap">
+    <main id="main">
+      <header id="header">
+        <div class="logo"></div>
+        <div class="nav"></div>
+      </header>
+      <section id="contents">
+        <div class="notice"></div>
+        <div class="gallry"></div>
+        <div class="link"></div>
+      </section>
+      <article id="slider"></article>
+    </main>
+    <footer id="footer">
+      <div class="footer1"></div>
+      <div class="footer2"></div>
+      <div class="footer3"></div>
+    </footer>
   </div>
-  <span>span</span>
 </body>
 
 </html>
