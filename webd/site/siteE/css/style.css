@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+#wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#header {
+    width: 200px;
+}
+
+
+#header .logo {
+    width: 100%;
+    height: 100px;
+    background-color: #eee;
+}
+
+#header .nav {
+    width: 100%;
+    height: 650px;
+    background-color: #e3e3e3;
+}
+
+
+#main {
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#main .con1 {
+    width: 400px;
+    height: 300px;
+    background-color: #dbc1c1;
+}
+
+#main .con1 .notice h3 {
+    margin-top: 50px;
+    font-size: 20px;
+    padding: 20px;
+    /* margin-bottom: 10px; */
+}
+
+#main .con1 .notice ul>li {
+    /* padding: 0 20px; */
+    padding: 10px 20px;
+    text-decoration-line: underline;
+}
+
+#main .con1 .notice ul>li span {
+    text-align: right;
+}
+
+#main .con2 {
+    width: 400px;
+    height: 450px;
+    background-color: #ddd;
+}
+
+#slider {
+    width: calc(100% - 600px);
+    height: 750px;
+    background-color: #d9d9d9;
+}
+
+#footer {
+    width: 100%;
+    display: flex;
+}
+
+#footer .footer1 {
+    width: 200px;
+    height: 100px;
+    background-color: #ccc;
+}
+
+#footer .footer2 {
+    width: calc(100% - 500px);
+    height: 100px;
+    background-color: #c3c3c3;
+}
+
+#footer .footer3 {
+    width: 300px;
+    height: 100px;
+    background-color: #c7c7c7;
+}
+
+/* nav */
+.nav {}
+
+.nav>ul {}
+
+.nav>ul>li {
+    /* position: relative; */
+}
+
+.nav>ul>li>a {
+    width: 100%;
+    padding: 10px;
+    display: block;
+    text-align: left;
+    background-color: #b1b1b1;
+}
+
+.nav>ul>li>a:hover {
+    background-color: #696969;
+}
+
+.nav>ul>li>ul {
+    display: none;
+    /* position: absolute;
+    left: 0;
+    top: 50; */
+}
+
+.nav>ul>li>ul>li {}
+
+.nav>ul>li>ul>li>a {
+    width: 100%;
+    padding: 10px;
+    display: block;
+    text-align: left;
+    background-color: #a3a3a3;
+}
+
+.nav>ul>li>ul>li>a:hover {
+    background-color: #696969;
+}

@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 
 <head>
@@ -44,112 +44,113 @@
 
         .bubble-1 {
             left: 10%;
-            animation-delay: 250ms;
+            animation-delay: 1000ms;
         }
 
         .bubble-2 {
-            left: 50%;
-            animation-delay: 550ms;
+            left: 20%;
+            animation-delay: 300ms;
         }
 
         .bubble-3 {
-            left: 70%;
-            animation-delay: 330ms;
+            left: 30%;
+            animation-delay: 2000ms;
         }
 
         .bubble-4 {
             left: 10%;
-            animation-delay: 1300ms;
+            animation-delay: 3000ms;
         }
 
         .bubble-5 {
-            left: 35%;
-            animation-delay: 1700ms;
+            left: 44%;
+            animation-delay: 4000ms;
         }
 
         .bubble-6 {
-            left: 75%;
-            animation-delay: 2500ms;
+            left: 33%;
+            animation-delay: 1300ms;
         }
 
         .bubble-7 {
-            left: 90%;
-            animation-delay: 3400ms;
+            left: 55%;
+            animation-delay: 2500ms;
         }
 
         .bubble-8 {
-            left: 850%;
-            animation-delay: 3700ms;
+            left: 66%;
+            animation-delay: 2700ms;
         }
 
         .bubble-9 {
-            left: 40%;
-            animation-delay: 1950ms;
-        }
-
-        .bubble-10 {
-            left: 350%;
-            animation-delay: 880ms;
-        }
-
-        .bubble-11 {
-            left: 5%;
-            animation-delay: 5000ms;
-        }
-
-        .bubble-12 {
-            left: 7%;
+            left: 77%;
             animation-delay: 3700ms;
         }
 
+        .bubble-10 {
+            left: 88%;
+            animation-delay: 4500ms;
+        }
+
+        .bubble-11 {
+            left: 14%;
+            animation-delay: 500ms;
+        }
+
+        .bubble-12 {
+            left: 48%;
+            animation-delay: 1800ms;
+        }
+
         .bubble-13 {
-            left: 60%;
-            animation-delay: 2400ms;
+            left: 26%;
+            animation-delay: 2200ms;
         }
 
         .bubble-14 {
-            left: 77%;
-            animation-delay: 3200ms;
+            left: 37%;
+            animation-delay: 4500ms;
         }
 
         .bubble-15 {
-            left: 85%;
-            animation-delay: 1700ms;
+            left: 49%;
+            animation-delay: 3600ms;
         }
 
         .bubble-16 {
-            left: 90%;
-            animation-delay: 760ms;
+            left: 66%;
+            animation-delay: 3900ms;
         }
 
         .bubble-17 {
-            left: 15%;
-            animation-delay: 120ms;
+            left: 45%;
+            animation-delay: 4100ms;
         }
 
         .bubble-18 {
-            left: 35%;
-            animation-delay: 770ms;
+            left: 67%;
+            animation-delay: 4600ms;
         }
 
         .bubble-19 {
-            left: 65%;
-            animation-delay: 200ms;
+            left: 25%;
+            animation-delay: 3500ms;
         }
 
         .bubble-20 {
-            left: 88%;
-            animation-delay: 3000ms;
+            left: 46%;
+            animation-delay: 2000ms;
         }
 
         .jelly-wrapper {
             width: 256px;
-            height: 270px;
+            height: 310px;
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            animation: jelly-movement 10s infinite;
+            animation: jelly-movement 10s infinite linear;
+
         }
 
         @keyframes jelly-movement {
@@ -218,7 +219,7 @@
 
             75% {
                 top: 50%;
-                left: 150px;
+                left: 150px
             }
 
             80% {
@@ -239,11 +240,9 @@
 
             100% {
                 top: 55%;
-                left: 50%;
+                left: 50%
             }
         }
-
-
 
         @keyframes bubble-move {
             0% {
@@ -260,15 +259,14 @@
         }
 
         .jelly-hair {
-            width: 90px;
-            height: 110px;
-            background: linear-gradient(to bottom, #f6fe0f 0%, #ffe600 2%, #ebf28a 100%);
+            width: 100px;
+            height: 75px;
+            background: linear-gradient(to bottom, #ef891a 0%, #ef891a 2%, #ebf28a 100%);
             position: absolute;
-            left: 40%;
-            top: -50px;
-            z-index: -1;
-            background-color: #8ef0f4;
-            border-radius: 1px;
+            left: 30%;
+            top: -10px;
+            z-index: -2;
+            border-radius: 25px;
             animation: hair-movement 10s infinite linear;
         }
 
@@ -307,57 +305,56 @@
         }
 
         .jelly-body {
-            width: 80%;
-            height: 70px;
-            background: linear-gradient(to bottom, #f8f2f2, #f4f3f3);
-            border-top-left-radius: 50px;
-            border-top-right-radius: 50px;
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(to bottom, #009dd2, #ebf28a);
+            border-top-left-radius: 70px;
+            border-top-right-radius: 90px;
             animation: body-movement 10s infinite linear;
             position: relative;
             z-index: 1;
             overflow: hidden;
-            border-radius: 50px;
         }
 
         @keyframes body-movement {
             0% {
-                border-top-left-radius: 50px;
-                border-top-right-radius: 50px;
+                border-top-left-radius: 70px;
+                border-top-right-radius: 90px;
             }
 
             20% {
-                border-top-left-radius: 50px;
-                border-top-right-radius: 50px;
+                border-top-left-radius: 70px;
+                border-top-right-radius: 90px;
             }
 
             25% {
-                border-top-left-radius: 50px;
-                border-top-right-radius: 50px;
+                border-top-left-radius: 80px;
+                border-top-right-radius: 80px;
             }
 
             30% {
-                border-top-left-radius: 50px;
-                border-top-right-radius: 50px;
+                border-top-left-radius: 90px;
+                border-top-right-radius: 70px;
             }
 
             70% {
-                border-top-left-radius: 50px;
-                border-top-right-radius: 50px;
+                border-top-left-radius: 90px;
+                border-top-right-radius: 70px;
             }
 
             75% {
-                border-top-left-radius: 50px;
-                border-top-right-radius: 50px;
+                border-top-left-radius: 80px;
+                border-top-right-radius: 80px;
             }
 
             80% {
-                border-top-left-radius: 50px;
-                border-top-right-radius: 50px;
+                border-top-left-radius: 70px;
+                border-top-right-radius: 90px;
             }
 
             100% {
-                border-top-left-radius: 50px;
-                border-top-right-radius: 50px;
+                border-top-left-radius: 70px;
+                border-top-right-radius: 90px;
             }
         }
 
@@ -391,7 +388,7 @@
                 left: 40%;
             }
 
-            70% {
+            75% {
                 left: 50%;
             }
 
@@ -406,16 +403,16 @@
 
         .jelly-eye {
             position: absolute;
-            top: -20px;
+            top: -40px;
         }
 
         .jelly-eye::before {
             content: '';
             position: absolute;
-            left: 30px;
-            width: 15px;
-            height: 15px;
-            background-color: #000;
+            left: 60px;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
             border-radius: 50%;
         }
 
@@ -423,18 +420,18 @@
             content: '';
             position: absolute;
             left: -60px;
-            width: 15px;
-            height: 15px;
-            background-color: #000;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
             border-radius: 50%;
         }
 
         .jelly-mouth {
             position: absolute;
-            width: 140px;
-            height: 40px;
-            background-color: #ecd3e1;
-            border-radius: 100px;
+            width: 200px;
+            height: 80px;
+            background-color: #f4cfd1;
+            border-radius: 30px;
             transform: translateX(-50%);
         }
 
@@ -443,95 +440,103 @@
             position: absolute;
             left: 50%;
             top: 50%;
-            width: 60px;
+            width: 60%;
             height: 1px;
             background-color: #ff9393;
-            border-radius: 80px;
             transform: translateX(-50%);
         }
 
         .jelly-hand {
             position: absolute;
-            top: 20px;
+            top: 65px;
         }
 
         .jelly-hand::before {
             content: '';
             width: 45px;
             height: 50px;
-            box-shadow: 0 5px 6px rgba(59, 148, 155, 0.7);
+            box-shadow: 0 5px 6px #3b949b;
             position: absolute;
             left: 105px;
-            border-radius: 25px;
+            border-radius: 0 0 50% 50%;
         }
 
         .jelly-hand::after {
             content: '';
             width: 45px;
             height: 50px;
-            box-shadow: 0 5px 6px rgba(59, 148, 155, 0.7);
+            box-shadow: 0 5px 6px #3b949b;
             position: absolute;
             left: -150px;
-            border-radius: 25px;
+            border-radius: 0 0 50% 50%;
         }
 
-        /* .jelly-tentacle1 {
-            width: 30px;
-            height: 20px;
-            background-color: #efefef;
-            border-radius: 90%;
+        .jelly-tentacle1 {
+            width: 50px;
+            height: 50px;
+            background-color: #ebf28a;
+            border-radius: 0 0 50% 50%;
             position: absolute;
-            left: 50%;
-            box-shadow: 0.1px #fff;
-            animation: tentacle .5s infinite ease-in -0.1s;
+            left: 0;
+            box-shadow: 0 2px #008d98;
+            animation: tentacle 1s infinite ease-in -0.5s;
         }
 
         .jelly-tentacle2 {
-            width: 30px;
-            height: 20px;
-            background-color: #efefef;
-            border-radius: 90%;
+            width: 50px;
+            height: 50px;
+            background-color: #ebf28a;
+            border-radius: 0 0 50% 50%;
             position: absolute;
-            left: 50%;
-            box-shadow: 0.1px #fff;
-            animation: tentacle .5s infinite ease-in -0.1s;
+            left: 20%;
+            box-shadow: 0 2px #008d98;
+            animation: tentacle 1s infinite ease-in -0.1s;
         }
 
         .jelly-tentacle3 {
-            width: 30px;
-            height: 20px;
-            background-color: #efefef;
-            border-radius: 90%;
+            width: 50px;
+            height: 50px;
+            background-color: #ebf28a;
+            border-radius: 0 0 50% 50%;
             position: absolute;
-            left: 50%;
-            box-shadow: 0.1px #fff;
-            animation: tentacle .5s infinite ease-in -0.1s;
+            left: 40%;
+            box-shadow: 0 2px #008d98;
+            animation: tentacle 1s infinite ease-in -0.9s;
         }
 
         .jelly-tentacle4 {
-            width: 30px;
-            height: 20px;
-            background-color: #efefef;
-            border-radius: 90%;
+            width: 50px;
+            height: 50px;
+            background-color: #ebf28a;
+            border-radius: 0 0 50% 50%;
             position: absolute;
-            left: 50%;
-            box-shadow: 0.1px #fff;
-            animation: tentacle .5s infinite ease-in -0.1s;
+            left: 60%;
+            box-shadow: 0 2px #008d98;
+            animation: tentacle 1s infinite ease-in -0.5s;
         }
- */
 
+        .jelly-tentacle5 {
+            width: 50px;
+            height: 50px;
+            background-color: #ebf28a;
+            border-radius: 0 0 50% 50%;
+            position: absolute;
+            left: 80%;
+            box-shadow: 0 2px #008d98;
+            animation: tentacle 1s infinite ease-in -0.1s;
+        }
 
         @keyframes tentacle {
             0% {
-                margin-left: -20px;
+                bottom: 15px;
             }
 
             50% {
-                margin-left: 20px;
+                bottom: 35px;
             }
 
             100% {
-                margin-left: -20px;
+                bottom: 15px;
             }
         }
     </style>
@@ -549,6 +554,7 @@
         <div class="bubble-8"></div>
         <div class="bubble-9"></div>
         <div class="bubble-10"></div>
+
         <div class="jelly-wrapper">
             <div class="jelly-hair"></div>
             <div class="jelly-body">
@@ -562,9 +568,9 @@
             <div class="jelly-tentacle2"></div>
             <div class="jelly-tentacle3"></div>
             <div class="jelly-tentacle4"></div>
-
-
+            <div class="jelly-tentacle5"></div>
         </div>
+
         <div class="bubble-11"></div>
         <div class="bubble-12"></div>
         <div class="bubble-13"></div>
@@ -575,131 +581,6 @@
         <div class="bubble-18"></div>
         <div class="bubble-19"></div>
         <div class="bubble-20"></div>
-    </div>
-</body>
-
-</html> -->
-
-<!DOCTYPE html>
-<html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Egg Sushi Character</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #f1f1f1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .egg-sushi {
-            width: 150px;
-            height: 100px;
-            position: relative;
-            animation: wiggle 2s infinite ease-in-out;
-        }
-
-        .egg {
-            width: 100%;
-            height: 100%;
-            background-color: #fff;
-            border-radius: 50%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .egg::before {
-            content: '';
-            width: 100%;
-            height: 50%;
-            background-color: #fde08e;
-            position: absolute;
-            top: 0;
-            left: 0;
-            border-radius: 50%;
-        }
-
-        .egg::after {
-            content: '';
-            width: 100%;
-            height: 40%;
-            background-color: #fff;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            border-radius: 50%;
-        }
-
-        .nori {
-            width: 40px;
-            height: 40px;
-            background-color: #000;
-            position: absolute;
-            top: 45%;
-            left: 30%;
-            border-radius: 50%;
-            transform: rotate(45deg);
-        }
-
-        .eye {
-            width: 10px;
-            height: 10px;
-            background-color: #000;
-            border-radius: 50%;
-            position: absolute;
-            top: 40px;
-            left: 70px;
-        }
-
-        .mouth {
-            width: 30px;
-            height: 10px;
-            background-color: #fde08e;
-            position: absolute;
-            top: 70px;
-            left: 60px;
-            border-radius: 5px;
-        }
-
-        @keyframes wiggle {
-
-            0%,
-            100% {
-                transform: rotate(0deg);
-            }
-
-            50% {
-                transform: rotate(2deg);
-            }
-
-            75% {
-                transform: rotate(-1deg);
-            }
-
-            25% {
-                transform: rotate(1deg);
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <div class="egg-sushi">
-        <div class="egg">
-            <div class="nori"></div>
-        </div>
-        <div class="eye"></div>
-        <div class="mouth"></div>
     </div>
 </body>
 
