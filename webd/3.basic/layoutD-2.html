@@ -11,32 +11,117 @@
             padding: 0;
         }
 
-        a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        li {
-            list-style: none;
-        }
-
         #wrap {
             width: 100%;
+            display: flex;
+            flex-wrap: wrap;
         }
 
-        #header {}
+        #aside {
+            width: 200px;
+        }
 
-        #main {}
+        #aside .logo {
+            width: 100%;
+            height: 100px;
+            background-color: #eee;
+        }
 
-        #footer {}
+        #aside .nav {
+            width: 100%;
+            height: 550px;
+            background-color: #e3e3e3;
+        }
+
+        #main {
+            width: calc(100% - 200px);
+            height: 650px;
+            background-color: #ddd;
+        }
+
+        #slider {
+            width: 100%;
+            display: flex;
+        }
+
+        #slider .image {
+            width: calc(100% - 230px);
+            height: 400px;
+            background-color: #d9d9d9;
+        }
+
+        #slider .banner {
+            width: 230px;
+            height: 400px;
+            background-color: red
+        }
+
+        #contents {
+            width: 100%;
+            display: flex;
+        }
+
+        #contents .content1 {
+            width: 50%;
+            height: 250px;
+            background-color: #cdcdcd;
+        }
+
+        #contents .content2 {
+            width: 50%;
+            height: 250px;
+            background-color: #c3c3c3;
+        }
+
+        #footer {
+            width: 100%;
+            display: flex;
+        }
+
+        #footer .footer1 {
+            width: 20%;
+            height: 100px;
+            background-color: #b1b1b1;
+        }
+
+        #footer .footer2 {
+            width: 60%;
+            height: 100px;
+            background-color: #b3b3b3;
+        }
+
+        #footer .footer3 {
+            width: 20%;
+            height: 100px;
+            background-color: #b9b9b9;
+        }
     </style>
 </head>
 
 <body>
     <div id="wrap">
-        <header id="header"></header>
-        <main id="main"></main>
-        <footer id="footer"></footer>
+        <aside id="aside">
+            <h1 class="logo"></h1>
+            <nav class="nav"></nav>
+        </aside>
+        <!-- //aside -->
+
+        <main id="main">
+            <article id="slider">
+                <div class="image"></div>
+                <div class="banner"></div>
+            </article>
+            <!-- //slider -->
+            <section id="contents">
+                <div class="content1"></div>
+                <div class="content2"></div>
+            </section>
+        </main>
+        <footer id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </footer>
     </div>
 </body>
 
