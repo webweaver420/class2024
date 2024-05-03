@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹디자인기능사 레이아웃 E-1</title>
+    <title>E-1</title>
     <style>
         * {
             margin: 0;
@@ -14,6 +13,7 @@
 
         #wrap {
             width: 100%;
+
         }
 
         #main {
@@ -22,17 +22,18 @@
             display: flex;
         }
 
-        #haeader {
+        #header {
             width: 200px;
+            height: 100%;
         }
 
-        #haeader .logo {
+        #header .logo {
             width: 100%;
             height: 10%;
             background-color: #efefef;
         }
 
-        #haeader .nav {
+        #header .nav {
             width: 100%;
             height: 90%;
             background-color: #e3e3e3;
@@ -40,6 +41,7 @@
 
         #contents {
             width: 400px;
+            height: 100%;
         }
 
         #contents .banner {
@@ -80,7 +82,7 @@
         #footer .footer1 {
             width: 20%;
             height: 120px;
-            background-color: #a3a3a3;
+            background-color: #b3b3b3;
         }
 
         #footer .footer2 {
@@ -90,13 +92,13 @@
         #footer .footer2 .footer2-1 {
             width: 100%;
             height: 60px;
-            background-color: #9d9d9d;
+            background-color: #848484;
         }
 
         #footer .footer2 .footer2-2 {
             width: 100%;
             height: 60px;
-            background-color: #808080
+            background-color: #696969;
         }
     </style>
 </head>
@@ -104,11 +106,11 @@
 <body>
     <div id="wrap">
         <main id="main">
-            <header id="haeader">
+            <header id="header">
                 <h1 class="logo"></h1>
                 <nav class="nav"></nav>
             </header>
-            <!-- //haeader -->
+            <!-- //header -->
 
             <section id="contents">
                 <article class="banner"></article>
@@ -122,8 +124,6 @@
             </article>
             <!-- //slider -->
         </main>
-        <!-- //main -->
-
         <footer id="footer">
             <div class="footer1"></div>
             <div class="footer2">
@@ -131,9 +131,7 @@
                 <div class="footer2-2"></div>
             </div>
         </footer>
-        <!-- //footer -->
     </div>
-    <!-- //wrap -->
 </body>
 
 </html>
