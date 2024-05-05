@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>웹디자인기능사 S-1</title>
+  <title>S-1</title>
+  <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -85,17 +86,17 @@
       background-color: #9d9d9d;
     }
 
-    /* slider */
-    .sliderWrap {
-      position: relative;
-    }
-
     .sliderWrap>div {
       display: none;
     }
 
     .sliderWrap>div:first-child {
       display: block;
+    }
+
+    /* slider */
+    .sliderWrap {
+      position: relative;
     }
 
     .sliderWrap .slider {
@@ -106,14 +107,18 @@
 
     .sliderWrap .slider img {
       vertical-align: top;
+      /*이미지여백으로 인한 필수 속성임*/
     }
 
     .sliderWrap .slider span {
       position: absolute;
       left: 50%;
       top: 50%;
+      /*이미지 위에 텍스트를 중앙 정렬하여 표시하기 위해 해당 선택자에 포지션 속성 적용 후  left: 50%; top: 50%;를 적용하면 스팬(텍스트) 요소가 해당 슬라이드의 가운데에 위치 */
       transform: translate(-50%, -50%);
-      background-color: rgb(0, 0, 0, 0.4);
+      /*그 후 transform: translate(-50%, -50%);를 사용하여 스팬(텍스트) 요소의 중앙 정렬을 조정*/
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #fff;
       padding: 10px 20px;
     }
   </style>
@@ -160,25 +165,25 @@
     <!-- //footer -->
   </div>
   <!-- //wrap -->
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>
-    $(function () {            //문서가 완전히 로드되면 함수 내의 코드를 실행해라
-      let currentIndex = 0;   //현재 표시되는 이미지의 인덱스를 나타내는 변수를 선언하고 0으로 초기화
+    $(function () {
+      let currentIndex = 0;   //현재 이미지 초기값 설정
+      $(".sliderWrap").append($(".slider").first().clone(true));  //첫번째 이미지를 복사, 마지막에 추가
 
-      setInterval(function () {     //이 함수는 일정한 간격마다 주기적으로 실행되는 함수
-        let nextIndex = (currentIndex + 1) % 3; // 1 2 0 1 2 무한반복
+      setInterval(function () {     //3초에 한번씩 실행
+        currentIndex++;     //현재 이미지를 1씩 증가
+        $(".sliderWrap").animate({ marginLeft: -currentIndex * 100 + "%" }, 600); //이미지 애니메이션
 
-        $(".slider").eq(currentIndex).fadeOut(1200);    //첫번째 이미지 사라짐
-        $(".slider").eq(nextIndex).fadeIn(1200);        //두번째 이미지 나타남
-
-        currentIndex = nextIndex;  //두번째 인덱값을 현재 인덱값에 저장
+        if (currentIndex == 3) {  //마지막 이미지일때
+          setTimeout(function () {
+            $(".sliderWrap").animate({ marginLeft: 0 }, 0);   //애니메이션을 정지
+            currentIndex = 0;   //현재이미지 초기화
+          }, 700);
+        }
       }, 3000);
     });
   </script>
-
 </body>
-
 
 </html>
