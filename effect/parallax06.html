@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parallax Effect</title>
+    <link rel="stylesheet" href="assets/css/parallax.css">
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/parallax.css">
     <style>
         @font-face {
             font-family: "gmarket";
-            font-weight: normal;
+            font-weight: 300;
             font-style: normal;
-            src: url("https://cdn.jsdelivr.net/gh/websfont/gmarket/gmarket-Light.woff2") format("woff2"),
-                url("https://cdn.jsdelivr.net/gh/websfont/gmarket/gmarket-Light.woff") format("woff");
+            src:
+                url("assets/fonts/hallymGothic-Medium.woff") format("woff"),
+                url("assets/fonts/hallymGothic-Medium.woff2") format("woff2");
             font-display: swap;
         }
 
@@ -32,7 +33,7 @@
             width: 98%;
             margin: 0 auto;
             /* background-color: rgba(255,255,255,0.1); */
-            font-family: 'NexonLv1Gothic';
+            font-family: 'hallymGothic-Medium';
         }
 
         .parallax__item {
@@ -57,7 +58,7 @@
             left: -5vw;
             top: -13vw;
             opacity: 0.07;
-            font-family: "Lato";
+            font-family: "hallymGothic-Medium";
             font-weight: 100;
         }
 
@@ -137,7 +138,7 @@
         .parallax__item__desc {
             font-size: 4vw;
             line-height: 1.4;
-            margin-top: -5vw;
+            margin-top: -0;
             margin-left: -4vw;
             z-index: 100;
             position: relative;
@@ -149,16 +150,24 @@
             margin-left: auto;
             margin-right: -4vw;
         }
+
+        .parallax__item__num {
+            color: #fff;
+        }
+
+        .split>span {
+            display: inline-block;
+            min-width: 1vw;
+        }
     </style>
 </head>
 
-<body class="bg3">
+<body>
     <div id="wrap">
         <header id="header">
             <div class="header__inner">
-                <h1><a href="index.html">Parallax Effect 06</a></h1>
-                <p>GSAP scrollTrigger - 텍스트효과</p>
-
+                <h1><a href="index.html">Parallax Effect</a><em> 06</em></h1>
+                <p>GSAP scrollTrigger - 나타나기</p>
                 <div class="link">
                     <ul>
                         <li><a href="mouse01.html">mouse</a></li>
@@ -167,7 +176,6 @@
             </div>
         </header>
         <!-- //header -->
-
         <main id="parallax__cont">
             <section id="section1" class="parallax__item">
                 <span class="parallax__item__num">01</span>
@@ -178,7 +186,6 @@
                 <p class="parallax__item__desc split">높은 목표를 세우고, 스스로 채찍질 한다.</p>
             </section>
             <!-- //section1 -->
-
             <section id="section2" class="parallax__item">
                 <span class="parallax__item__num">02</span>
                 <h2 class="parallax__item__title">section2</h2>
@@ -188,7 +195,6 @@
                 <p class="parallax__item__desc split">결과도 중요하지만, 과정을 더 중요하게 생각한다.</p>
             </section>
             <!-- //section2 -->
-
             <section id="section3" class="parallax__item">
                 <span class="parallax__item__num">03</span>
                 <h2 class="parallax__item__title">section3</h2>
@@ -198,7 +204,6 @@
                 <p class="parallax__item__desc split">매 순간에 최선을 다하고, 끊임없이 변화한다.</p>
             </section>
             <!-- //section3 -->
-
             <section id="section4" class="parallax__item">
                 <span class="parallax__item__num">04</span>
                 <h2 class="parallax__item__title">section4</h2>
@@ -208,7 +213,6 @@
                 <p class="parallax__item__desc split">모든 일에는 기본을 중요하게 생각한다.</p>
             </section>
             <!-- //section4 -->
-
             <section id="section5" class="parallax__item">
                 <span class="parallax__item__num">05</span>
                 <h2 class="parallax__item__title">section5</h2>
@@ -218,7 +222,6 @@
                 <p class="parallax__item__desc split">열정을 잃지 않고 실패에서 실패로 걸어가는 것이 성공이다.</p>
             </section>
             <!-- //section5 -->
-
             <section id="section6" class="parallax__item">
                 <span class="parallax__item__num">06</span>
                 <h2 class="parallax__item__title">section6</h2>
@@ -228,7 +231,6 @@
                 <p class="parallax__item__desc split">천 마디 말보단 하나의 행동이 더 값지다.</p>
             </section>
             <!-- //section6 -->
-
             <section id="section7" class="parallax__item">
                 <span class="parallax__item__num">07</span>
                 <h2 class="parallax__item__title">section7</h2>
@@ -238,28 +240,26 @@
                 <p class="parallax__item__desc split">조그만 성공에 만족하지 않으며, 방심을 경계한다.</p>
             </section>
             <!-- //section7 -->
-
             <section id="section8" class="parallax__item">
-                <span class="parallax__item__num reveal reveal_TTB">08</span>
-                <h2 class="parallax__item__title reveal reveal_LTR">section8</h2>
-                <figure class="parallax__item__imgWrap reveal reveal_BTT">
+                <span class="parallax__item__num  ">08</span>
+                <h2 class="parallax__item__title  ">section8</h2>
+                <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc" data-delay="1.5">나는 내가 더 노력할수록 운이 더 좋아진다는 걸 발견했다.</p>
+                <p class="parallax__item__desc split">나는 내가 더 노력할수록 운이 더 좋아진다는 걸 발견했다.</p>
             </section>
             <!-- //section8 -->
-
             <section id="section9" class="parallax__item">
                 <span class="parallax__item__num">09</span>
                 <h2 class="parallax__item__title">section9</h2>
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc">꿈이 있다면, 그 꿈을 잡고 절대 놓아주지마라.</p>
+                <p class="parallax__item__desc split">꿈이 있다면, 그 꿈을 잡고 절대 놓아주지마라.</p>
             </section>
             <!-- //section9 -->
         </main>
-
+        <!-- //main -->
         <footer id="footer">
             <div class="footer__inner">
                 <nav>
@@ -277,26 +277,88 @@
         <!-- //footer -->
     </div>
     <!-- //wrap -->
-
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <script>
         // 단수
         // let text = document.querySelector(".split");
-        // let splitText = text.innerText;  //이너텍스트 글자를 퍼트리기도하고 가져오기도 함
-        // let splitWrap = splitText.split("").join("</span > <span>");
+        // let splitText = text.innerText;
+        // let splitWrap = splitText.split("").join("</span><span>");
         // text.innerHTML = splitWrap = "<span>" + splitWrap + "</span>";
-        // console.log(splitWrap)
-
+       
         // 복수(forEach)
-        document.querySelectorAll(".split").forEach(text => {
-            let splitText = text.innerText;
-            let splitWrap = splitText.split("").join("</span > <span>");
-            text.innerHTML = splitWrap = "<span>" + splitWrap + "</span>";
-            console.log(splitWrap)
-        });
+        // document.querySelectorAll(".split").forEach(text => {
+        //     let splitText = text.innerText;
+        //     let splitWrap = splitText.split("").join("</span><span aria-hiddin='true'>");
+        //     text.innerHTML = splitWrap = "<span aria-hiddin='true'>" + splitWrap + "</span>";
+        //     text.setAttribute("aria-label", splitText);
+        // })
 
+        //gsap
+        // gsap.from(".split span", {
+        //     yPercent: 100,
+        //     autoAlpha: 0,
+        //     duration: 2,
+        //     ease: "circ.out",
+        //     stagger: 0.1,
+
+        //     scrollTrigger: {
+        //         trigger: ".split",
+        //         start: "top center",
+        //         end: "+=400",
+        //         markers: true,
+        //         // scrub: 1
+        //     }
+
+        // gsap.utils.toArray(".split").forEach((text) => {
+        //     gsap.from(text.querySelectorAll("span"), {
+        //         yPercent: 100,
+        //         autoAlpha: 0,
+        //         duration: 1,
+        //         ease: "circ.out",
+        //         stagger: {
+        //             amount: 1,
+        //             from: "random"
+        //         },
+
+        //         scrollTrigger: {
+        //             trigger: text,
+        //             start: "top center",
+        //             end: "+=400",
+        //             markers: true
+        //         }
+        //     })
+        // });
+    </script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script>
+        const targets=gsap.utils.toArray(".split");
+
+        targets.forEach((target)=>{
+            let splitClient=new SplitType(target,{type:"lines,words,chars"});
+            let lines = splitClient.lines;
+            let words = splitClient.words;
+            let chars = splitClient.chars;
+
+            gsap.from(chars,{
+                yPercent: 100,
+                autoAlpha: 0,
+                duration: 1,
+                ease: "circ.out",
+                stagger: {
+                    amount: 1,
+                    from: "random"
+                },
+
+                scrollTrigger: {
+                    trigger: target,
+                    start: "top center",
+                    end: "+=400",
+                    markers: true
+                }
+            })
+        });
     </script>
 </body>
 

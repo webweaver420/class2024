@@ -112,10 +112,6 @@
     }
 
     /* nav */
-    .nav {}
-
-    .nav>ul {}
-
     .nav>ul>li {
       position: relative;
     }
@@ -123,42 +119,33 @@
     .nav>ul>li>a {
       padding: 10px;
       display: block;
+      background-color: #c7c7c7;
       text-align: center;
-      background-color: #ccc;
     }
 
     .nav>ul>li>a:hover {
-      background-color: #696969;
+      background-color: #848484;
     }
 
     .nav>ul>li>ul {
       display: none;
       position: absolute;
-      right: -200px;
       top: 0;
       width: 200px;
-      background-color: #ddd;
+      right: -200px;
+      background-color: #c1c1c1;
     }
-
-    .nav>ul>li>ul>li {}
 
     .nav>ul>li>ul>li>a {
       padding: 10px;
       display: block;
-
     }
 
     .nav>ul>li>ul>li>a:hover {
-      background-color: #696969;
+      background-color: #848484;
     }
 
-    /* 자바스크립트용 */
-    .nav>ul>li>ul {
-      display: block;
-      height: 0;
-      overflow: hidden;
-      transition: all 400ms;
-    }
+    /* 자바스크립트 CSS */
   </style>
 </head>
 
@@ -233,28 +220,34 @@
     </div>
     <!-- //wrap -->
   </body>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>
-    // $(function(){
-    //   $(".nav > ul > li").mouseover(function(){
+    // $(function () {
+    //   $(".nav>ul>li").mouseover(function () {
     //     $(this).find(".submenu").stop().slideDown();
     //   });
-
-    //   $("nav > ul > li").mouseout(function(){
+    //   $(".nav>ul>li").mouseout(function () {
     //     $(this).find(".submenu").stop().slideUp();
     //   });
     // });
   </script>
   <script>
     window.onload = function () {
-      let navList = document.querySelectorAll(".nav > ul >li");
+      let navList = document.querySelectorAll(".nav > ul > li");
+
+      navList.forEach(function (nav) {
+        nav.querySelector("ul").style.display = "block";
+        nav.querySelector("ul").style.height = "0";
+        nav.querySelector("ul").style.overflow = "hidden";
+        nav.querySelector("ul").style.transition = "height 400ms";
+      });
 
       navList.forEach(function (navItem) {
         navItem.addEventListener("mouseover", function () {
           this.querySelector(".submenu").style.height = "155px";
         });
       });
-
       navList.forEach(function (navItem) {
         navItem.addEventListener("mouseout", function () {
           this.querySelector(".submenu").style.height = "0px";
@@ -262,5 +255,6 @@
       });
     }
   </script>
+</body>
 
 </html>
