@@ -112,20 +112,18 @@
     }
 
     /* nav */
-    .nav {
-      z-index: 1000;
-      position: relative;
-    }
+    .nav {}
 
     .nav>ul>li {
       position: relative;
     }
 
     .nav>ul>li>a {
-      padding: 10px;
+      padding: 10px 20px;
       display: block;
+      background-color: #c7c7c7;
       text-align: center;
-      background-color: #ccc;
+
     }
 
     .nav>ul>li>a:hover {
@@ -138,6 +136,7 @@
       right: -500px;
       top: 0;
       width: 500px;
+      display: flex;
     }
 
     .nav>ul>li>ul>li {
@@ -147,7 +146,10 @@
     .nav>ul>li>ul>li>a {
       padding: 10px;
       display: inline-block;
-      width: 100px;
+
+      background-color: #ccc;
+      text-align: center;
+
     }
 
     .nav>ul>li>ul>li>a:hover {
@@ -160,19 +162,14 @@
 
     #main::after {
       content: '';
-      width: 0%;
-      height: 193px;
-      background-color: #b0b0b0;
       position: absolute;
-      left: 0;
-      top: 100px;
-      z-index: 1;
-      transition: all 300ms;
+      right: 0;
+      top: 0;
+      width: 100%;
+      background-color: #000;
     }
 
-    #main.on::after {
-      width: 100%;
-    }
+    #main.on::after {}
   </style>
 </head>
 
@@ -261,22 +258,22 @@
     // });
   </script>
   <script>
-    window.onload = function () {
-      let navList = document.querySelector(".nav>ul");
+    // window.onload = function () {
+    //   let navList = document.querySelector(".nav>ul");
 
-      navList.addEventListener("mouseover", function () {
-        navList.querySelectorAll(".submenu").forEach(sub => {
-          sub.style.display = "block";
-        });
-        document.getElementById("main").classList.add("on");
-      });
-      navList.addEventListener("mouseout", function () {
-        navList.querySelectorAll(".submenu").forEach(sub => {
-          sub.style.display = "none";
-        });
-        document.getElementById("main").classList.remove("on");
-      });
-    };
+    //   navList.addEventListener("mouseover", function () {
+    //     navList.querySelectorAll(".submenu").forEach(sub => {
+    //       sub.style.display = "block";
+    //     });
+    //     document.getElementById("main").classList.add("on");
+    //   });
+    //   navList.addEventListener("mouseout", function () {
+    //     navList.querySelectorAll(".submenu").forEach(sub => {
+    //       sub.style.display = "none";
+    //     });
+    //     document.getElementById("main").classList.remove("on");
+    //   });
+    // };
 
   </script>
 </body>

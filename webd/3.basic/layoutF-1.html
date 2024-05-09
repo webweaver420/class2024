@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #wrap {
+      width: 100%;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    #header {
+      width: 1340px;
+      display: flex;
+    }
+
+    #header .logo {
+      width: 20%;
+      height: 100px;
+      background-color: #efefef;
+    }
+
+    #header .nav {
+      width: 80%;
+      height: 100px;
+      background-color: #e3e3e3;
+    }
+
+    #slider {
+      width: 100%;
+      height: 350px;
+      background-color: #d9d9d9;
+      position: relative;
+      /* 슬라이더를 상대적 위치로 설정 */
+    }
+
+    #contents {
+      width: 1340px;
+      height: 600px;
+      background-color: #c7c7c7;
+    }
+
+    #contents .link {
+      width: 1340px;
+      height: 100px;
+      background-color: #c7c7c7;
+      margin-top: -100px;
+      /* 링크 부분이 슬라이더와 겹치도록 위로 이동 */
+      position: absolute;
+      /* 컨텐츠를 상대적 위치로 설정 */
+      z-index: 1;
+      /* 슬라이더 위에 컨텐츠가 올라가도록 z-index 설정 */
+    }
+
+    #contents .banner {
+      width: 100%;
+      height: 150px;
+      background-color: #c3c3c3;
+    }
+
+    #contents .notice {
+      width: 100%;
+      height: 350px;
+      background-color: #cbcbcb;
+    }
+
+    #footer {
+      width: 1340px;
+      display: flex;
+    }
+
+    #footer .footer1 {
+      width: 20%;
+      height: 120px;
+      background-color: #b1b1b1;
+    }
+
+    #footer .footer2 {
+      width: 80%;
+    }
+
+    #footer .footer2 .footer2-1 {
+      width: 100%;
+      height: 60px;
+      background-color: #bcbcbc;
+    }
+
+    #footer .footer2 .footer2-2 {
+      width: 100%;
+      height: 60px;
+      background-color: #a3a3a3;
+    }
+
+    #header,
+    #contents,
+    #footer {
+      width: 1340px;
+      /* 기존에 있던 width 속성 유지 */
+      margin: 0 auto;
+      /* 좌우 여백을 자동으로 설정하여 가운데 정렬 */
+    }
+
+    /* nav */
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .nav>ul {
+      display: flex;
+      justify-content: right;
+      margin-top: 58px;
+    }
+
+    .nav>ul>li {
+      position: relative;
+    }
+
+    .nav>ul>li>a {
+      padding: 10px 50px;
+      display: inline-block;
+      background-color: #ccc;
+    }
+
+    .nav>ul>li>a:hover {
+      background-color: #848484;
+    }
+
+    .nav>ul>li>ul {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 39;
+      background-color: #c7c7c7;
+      width: 100%;
+      text-align: center;
+    }
+
+    .nav>ul>li>ul>li>a {
+      padding: 10px;
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .nav>ul>li>ul>li>a:hover {
+      background-color: #848484;
+    }
+
+    /* tab_menu */
+    .tab_menu {
+      padding: 10px;
+    }
+
+    .tab_menu .tab_btn ul {
+      display: flex;
+    }
+
+    .tab_menu .tab_btn li a {
+      display: inline-block;
+      padding: 10px;
+      background-color: #d9d9d9;
+    }
+
+    .tab_menu .tab_btn li.active a {
+      text-decoration: underline;
+    }
+
+    .tab_menu .tab_cont {
+      /* display: none; */
+    }
+
+    .tab_menu .tab_cont>div {
+      display: block;
+      padding: 10px;
+      background-color: #d3d3d3;
+      line-height: 1.6;
+    }
+
+    .tab_menu .tab_cont>div:nth-child(2) {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <header id="header">
+      <h1 class="logo"></h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">menu1</a>
+            <ul class="submenu">
+              <li><a href="#">menu1-1</a></li>
+              <li><a href="#">menu1-2</a></li>
+              <li><a href="#">menu1-3</a></li>
+              <li><a href="#">menu1-4</a></li>
+              <li><a href="#">menu1-5</a></li>
+            </ul>
+          </li>
+          <li><a href="#">menu2</a>
+            <ul class="submenu">
+              <li><a href="#">menu1-1</a></li>
+              <li><a href="#">menu1-2</a></li>
+              <li><a href="#">menu1-3</a></li>
+              <li><a href="#">menu1-4</a></li>
+              <li><a href="#">menu1-5</a></li>
+            </ul>
+          </li>
+          <li><a href="#">menu3</a>
+            <ul class="submenu">
+              <li><a href="#">menu1-1</a></li>
+              <li><a href="#">menu1-2</a></li>
+              <li><a href="#">menu1-3</a></li>
+              <li><a href="#">menu1-4</a></li>
+              <li><a href="#">menu1-5</a></li>
+            </ul>
+          </li>
+          <li><a href="#">menu4</a>
+            <ul class="submenu">
+              <li><a href="#">menu1-1</a></li>
+              <li><a href="#">menu1-2</a></li>
+              <li><a href="#">menu1-3</a></li>
+              <li><a href="#">menu1-4</a></li>
+              <li><a href="#">menu1-5</a></li>
+            </ul>
+          </li>
+          <li><a href="#">menu5</a>
+            <ul class="submenu">
+              <li><a href="#">menu1-1</a></li>
+              <li><a href="#">menu1-2</a></li>
+              <li><a href="#">menu1-3</a></li>
+              <li><a href="#">menu1-4</a></li>
+              <li><a href="#">menu1-5</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- //header -->
+    <article id="slider">
+
+    </article>
+    <!-- //slider -->
+    <section id="contents">
+      <article class="link"></article>
+      <article class="banner"></article>
+      <section class="notice">
+        <div class="tab_menu">
+          <div class="tab_btn">
+            <ul>
+              <li class="active"><a href="#">공지사항</a></li>
+              <li><a href="#">갤러리</a></li>
+            </ul>
+          </div>
+          <div class="tab_cont">
+            <div>
+              탭메뉴1<br />탭메뉴1<br />탭메뉴1<br />탭메뉴1<br />
+            </div>
+            <div>
+              탭메뉴2<br />탭메뉴2<br />탭메뉴2<br />탭메뉴2<br />
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- //contents -->
+    <footer id="footer">
+      <div class="footer1"></div>
+      <div class="footer2">
+        <div class="footer2-1"></div>
+        <div class="footer2-2"></div>
+      </div>
+    </footer>
+    <!-- //footer -->
+  </div>
+  <!-- //wrap -->
+</body>
+
+</html>

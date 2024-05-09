@@ -5,16 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹디자인기능사 레이아웃 A-1</title>
+    <title>JUST 쇼핑몰</title>
     <style>
         * {
             margin: 0;
             padding: 0;
+            /* background-color: #ffffff; */
+        }
+
+        a {
+            color: #333333;
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
         }
 
         #wrap {
             width: 1200px;
             margin: 0 auto;
+            /*위아래0 가운데정렬*/
         }
 
         #header {
@@ -85,6 +96,48 @@
             height: 100px;
             background-color: #9d9d9d;
         }
+
+        /* nav */
+        .nav>ul {
+            display: flex;
+            justify-content: right;
+            margin-top: 60px;
+        }
+
+        .nav>ul>li {
+            position: relative;
+        }
+
+        .nav>ul>li>a {
+            padding: 10px 50px;
+            display: inline-block;
+            background-color: #c7c7c7
+        }
+
+        .nav>ul>li>a:hover {
+            background-color: #848484;
+        }
+
+        .nav>ul>li>ul {
+            /* display: none; */
+            position: absolute;
+            left: 0;
+            background-color: #c7c7c7;
+            width: 100%;
+            text-align: center;
+        }
+
+        .nav>ul>li>ul>li>a {
+            padding: 10px;
+            display: inline-block;
+            background-color: #a3a3a3;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .nav>ul>li>ul>li>a:hover {
+            background-color: #848484;
+        }
     </style>
 </head>
 
@@ -92,7 +145,42 @@
     <div id="wrap">
         <div id="header">
             <div class="logo"></div>
-            <div class="nav"></div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">탑</a>
+                        <ul class="submenu">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">티</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">아우터</a>
+                        <ul class="submenu">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">티</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">팬츠</a>
+                        <ul class="submenu">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">티</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">악세서리</a>
+                        <ul class="submenu">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">티</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
         <!-- //header -->
 
@@ -115,6 +203,27 @@
         <!-- //footer -->
     </div>
     <!-- //wrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        // $(function () {
+        //     $(".nav>ul>li").mouseover(function () {
+        //         $(".nav>ul>li>ul").stop().slideDown();
+        //     });
+        //     $(".nav>ul>li").mouseout(function () {
+        //         $(".nav>ul>li>ul").stop().slideUp();
+        //     });
+        // });
+    </script>
+    <script>
+        window.onload = function () {
+            let navList = document.querySelectorAll(".nav>ul>li");
+            navList.forEach(function () {
+                navList.addEventListener("mouseover", function () {
+                    navList.querySelectorAll(".submenu").forEach(sub =>)
+                });
+            });
+        };
+    </script>
 </body>
 
 </html>
