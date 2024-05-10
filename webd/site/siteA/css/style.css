@@ -1,260 +1,234 @@
-@charset "UTF-8";
+@charset "utf-8";
 
+/* reset */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  color: #333;
 }
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #333;
 }
 
 li {
   list-style: none;
 }
 
+img {
+  vertical-align: top;
+  width: 100%;
+}
+
 #wrap {
   width: 1200px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
+/* header */
 #header {
   width: 100%;
   display: flex;
-  background-color: aliceblue;
-  position: relative;
-  z-index: 1000;
+  background-color: #0c51a6;
 }
 
 #header .logo {
   width: 20%;
   height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 #header .logo a {
-  color: rgb(32, 165, 248);
+  display: inline-block;
+  color: #fff;
+  padding: 30px 40px;
 }
 
 #header .nav {
   width: 80%;
   height: 100px;
-  display: flex;
-  justify-content: right;
 }
 
 #header .nav>ul {
   display: flex;
-  margin-top: 59px;
+  justify-content: right;
+  align-items: center;
+  /*중앙정렬,기준이되는 height값이 있어야 함*/
+  height: 100%;
 }
 
 #header .nav>ul>li {
-  width: 138px;
-  background-color: rgb(201, 230, 255);
+  position: relative;
+  /* 서브메뉴가 li를 기준점으로 생겨야하기 때문에 설정 */
 }
 
 #header .nav>ul>li>a {
-  /* padding: 10px 30px; */
-  display: inline-block;
-  background-color: rgb(201, 230, 255);
+  color: #fff;
+  padding: 15px 45px;
+  background-color: #2c7cdd;
+  display: block;
 }
 
 #header .nav>ul>li>a:hover {
-  background-color: rgb(168, 214, 255);
+  background-color: #2884f5;
 }
 
 #header .nav>ul>li>ul {
   display: none;
+  position: absolute;
+  /* 서브메뉴 영역이 잡히지 않게 설정 */
+  left: 0;
+  /* 서브메뉴를 원하는 위치로 이동 */
+  background-color: #EEF5FF;
+  width: 100%;
   text-align: center;
 }
 
 #header .nav>ul>li>ul>li>a {
-  width: 100%;
-  padding: 10px 28px;
-  display: inline-block;
-  background-color: rgb(147, 204, 254);
-}
-
-#header .nav>ul>li>ul>li>a:hover {
-  background-color: rgb(87, 177, 255);
-}
-
-#slider {
-  width: 100%;
-  height: 300px;
-  background-color: #ddd;
-}
-
-.slider-wrap {
-  display: flex;
-}
-
-.slider-wrap .slider {
-  position: relative;
-}
-
-.slider-wrap .slider:first-child {
+  padding: 10px 20px;
   display: block;
 }
 
-.slider-wrap .slider img {
-  vertical-align: top;
+#header .nav>ul>li>ul>li>a:hover {
+  background-color: #c0dcff;
 }
 
-.slider-wrap .slider .text {
+/* slider */
+#slider {
+  width: 100%;
+  height: 300px;
+  background-color: #ccc;
+}
+
+#slider .sliderWrap {
+  position: relative;
+}
+
+#slider .sliderWrap .slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* 이미지를 하나로 모을 때 */
+}
+
+#slider .sliderWrap .slider .text {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   background-color: rgba(0, 0, 0, 0.3);
-  color: #fff;
-  padding: 10px 20px;
+  padding: 20px 30px;
 }
 
-#main {
+#slider .sliderWrap .slider .text h2 {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 3px;
+}
+
+#slider .sliderWrap .slider .text p {
+  color: #fff;
+  font-size: 16px;
+}
+
+/* contents */
+#contents {
   width: 100%;
   display: flex;
 }
 
-#main .notice {
-  width: 33.3333%;
+/* #contents .info */
+#contents .info {
+  width: 400px;
   height: 200px;
+  background-color: #dee8f4;
   padding: 20px;
-  background-color: aliceblue;
+  box-sizing: border-box;
+  /*박스사이징시 패딩값이 포함안됨*/
 }
 
-#main .notice h3 {
-  font-size: 24px;
+#contents .info .info_menu {
   margin-bottom: 10px;
 }
 
-#main .notice li {
+#contents .info .info_menu a {
+  font-size: 24px;
+}
+
+#contents .info .info_cont .notice {
+  display: none;
+}
+
+#contents .info .info_cont .notice li {
   display: flex;
-  justify-content: space-between;
-  line-height: 1.8;
 }
 
-#main .notice li a {
-  width: 70%;
+#contents .info .info_cont .notice li a {
+  width: 75%;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-#main .notice li a:hover {
-  text-decoration: underline;
-  text-underline-position: under;
-}
-
-#main .notice li span {
-  width: 30%;
+#contents .info .info_cont .notice li span {
+  width: 25%;
+  font-size: 16px;
+  line-height: 1.6;
   text-align: right;
 }
 
-#main .gallery {
-  width: 33.3333%;
-  height: 200px;
-  padding: 20px;
-}
-
-#main .gallery h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-#main .gallery ul {
+#contents .info .info_cont .gallery ul {
   display: flex;
+  justify-content: space-between;
 }
 
-#main .gallery li {
-  margin-right: 15px;
-  transition: all 0.3s;
+#contents .info .info_cont .gallery ul li a {
+  border: 2px solid transparent;
+  display: block;
 }
 
-#main .gallery li:hover {
-  opacity: 0.4;
+#contents .info .info_cont .gallery ul li a:hover {
+  border-color: #0a4288;
 }
 
-#main .gallery li img {
-  vertical-align: top;
-}
-
-#main .link {
-  width: 33.3333%;
+/* banner */
+#contents .banner {
+  width: 400px;
   height: 200px;
-  background-image: url(../images/event.jpg);
-  background-size: cover;
-  background-position: center;
-  padding: 20px;
-  position: relative;
+  background-color: url(../images/)
 }
 
-#main .link h3 {
-  color: #fff;
-}
-
-#main .link a {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  background-color: #fff;
-  text-align: center;
-  line-height: 100px;
-  border-radius: 50%;
-  font-size: 20px;
-  transition: all 0.3s;
-}
-
-#main .link a:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+#contents .link {
+  width: 400px;
+  height: 200px;
+  background-color: #bcbcbc;
 }
 
 #footer {
   width: 100%;
+  display: flex;
+}
+
+#footer .footer1 {
+  width: 20%;
   height: 100px;
-  display: flex;
-  background-color: #ccc;
+  background-color: #aaa;
 }
 
-#footer .left {
+#footer .footer2 {
   width: 80%;
+  height: 100px;
+  background-color: #a3a3a3;
 }
 
-#footer .left .menu {
-  padding: 20px;
+#footer .footer2 .footer2-1 {
+  width: 100%;
+  height: 50px;
+  background-color: #ababab;
 }
 
-#footer .left .menu ul {
-  display: flex;
-  justify-content: center;
-}
-
-#footer .left .menu li {
-  padding: 3px 10px;
-}
-
-#footer .left .menu li a:hover {
-  text-decoration: underline;
-  text-underline-position: under;
-}
-
-#footer .left .copy {
-  text-align: center;
-}
-
-#footer .right {
-  height: 20%;
-}
-
-#footer .right select {
-  border: 1px solid #000;
-  padding: 10px 20px;
-  font-size: 16px;
-  margin-top: 30px;
+#footer .footer2 .footer2-2 {
+  width: 100%;
+  height: 50px;
+  background-color: #a9a9a9;
 }
