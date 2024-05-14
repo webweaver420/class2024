@@ -4,96 +4,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>역사 박물관</title>
-    <link rel="stylesheet" href="../siteE/css/style.css">
-</head>
+    <title>철길 마을</title>
 
-<body>
-    <div id="wrap">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- script -->
+    <script src="script/jquery.min.js"></script>
+    <script src="script/script.js"></script>
+</head>
+<div id="wrap">
+    <main id="main">
         <header id="header">
-            <h3 class="logo"></h3>
+            <h1 class="logo">
+                <a href="#">철길 마을</a>
+            </h1>
             <nav class="nav">
                 <ul>
-                    <li><a href="#">menu1</a>
-                        <ul class="submenu">
-                            <li><a href="#">menu1-1</a></li>
-                            <li><a href="#">menu1-2</a></li>
-                            <li><a href="#">menu1-3</a></li>
-                            <li><a href="#">menu1-4</a></li>
+                    <li><a href="#">철길마을</a>
+                        <ul>
+                            <li><a href="#">마을 소개</a></li>
+                            <li><a href="#">마을의 유래</a></li>
+                            <li><a href="#">볼거리</a></li>
+                            <li><a href="#">찾아오시는 길</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">menu2</a>
-                        <ul class="submenu">
-                            <li><a href="#">menu2-1</a></li>
-                            <li><a href="#">menu2-2</a></li>
-                            <li><a href="#">menu2-3</a></li>
-                            <li><a href="#">menu2-4</a></li>
+                    <li><a href="#">주변맛집</a>
+                        <ul>
+                            <li><a href="#">철길마을</a></li>
+                            <li><a href="#">주변맛집</a></li>
+                            <li><a href="#">주변여행지</a></li>
+                            <li><a href="#">도움마당</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">menu3</a>
-                        <ul class="submenu">
-                            <li><a href="#">menu3-1</a></li>
-                            <li><a href="#">menu3-2</a></li>
-                            <li><a href="#">menu3-3</a></li>
-                            <li><a href="#">menu3-4</a></li>
+                    <li><a href="#">주변여행지</a>
+                        <ul>
+                            <li><a href="#">은파호수공원</a></li>
+                            <li><a href="#">초원사진관</a></li>
+                            <li><a href="#">월명공원</a></li>
+                            <li><a href="#">진포해양공원</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">menu4</a>
-                        <ul class="submenu">
-                            <li><a href="#">menu4-1</a></li>
-                            <li><a href="#">menu4-2</a></li>
-                            <li><a href="#">menu4-3</a></li>
-                            <li><a href="#">menu4-4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">menu5</a>
-                        <ul class="submenu">
-                            <li><a href="#">menu5-1</a></li>
-                            <li><a href="#">menu5-2</a></li>
-                            <li><a href="#">menu5-3</a></li>
-                            <li><a href="#">menu5-4</a></li>
+                    <li><a href="#">도움마당</a>
+                        <ul>
+                            <li><a href="#">교통정보</a></li>
+                            <li><a href="#">주변 주차장</a></li>
+                            <li><a href="#">자료실</a></li>
+                            <li><a href="#">자료마당</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </header>
-        <main id="main">
-            <section class="con1">
-                <div class="notice">
-                    <h3>공지사항</h3>
-                    <ul>
-                        <li><a href="#">서울 벛꽃 축제 개최안내</a><span>2024.04.01</span></li>
-                        <li><a href="#">서울 역사박물관 리모델링 공사안내</a><span>2024.04.20</span></li>
-                        <li><a href="#">서울 지하철 2호선 운행시간 변경안내</a><span>2024.06.20</span></li>
-                        <li><a href="#">서울 현대미술관 특별 전시회 개최안내</a><span>2024.08.09</span></li>
-                </div>
-            </section>
-            <section class="con2">
-                <div class="gallery">
-                    <ul>
-                        <li><a href="#">
-                                <img src="images/gallery/gallery1" alt="">
-                            </a></li>
-                    </ul>
-                </div>
-                <div class="link"></div>
-            </section>
-        </main>
-        <!-- //main -->
+        <!-- //header -->
+
+        <section id="contents">
+            <article class="banner">
+                <h3>기차 여행</h3>
+                <a href="#">예매하기</a>
+            </article>
+            <!-- //banner -->
+
+            <article class="notice">
+                <h3>철길마을 공지사항</h3>
+                <ul>
+                    <li><a href="#">철길마을 축제일정 변경안내</a><span>2024.05.01</span></li>
+                    <li><a href="#">철길마을 도서관 임시폐쇄안내</a><span>2024.05.04</span></li>
+                    <li><a href="#">철길마을 자원봉사자 모집공고</a><span>2024.05.15</span></li>
+                    <li><a href="#">철길마을 청소 캠페인안내</a><span>2024.05.20</span></li>
+                    <li><a href="#">철길마을 최신 소식</a><span>2024.05.29</span></li>
+                </ul>
+                <a href="#" class="more">더보기+</a>
+            </article>
+            <!-- //notice -->
+
+            <article class="gallery">
+                <h3>철길마을 갤러리</h3>
+                <ul>
+                    <li><a href="#">최고의 뷰</a></li>
+                    <li><a href="#">위험한 뷰</a></li>
+                    <li><a href="#">아름다운 뷰</a></li>
+                </ul>
+                <a href="#" class="more">더보기+</a>
+            </article>
+            <!-- //gallery -->
+
+            <article class="link">
+                <h3>help</h3>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="images/icon01.png" alt="사진">
+                            <span>사진찍기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/icon02.png" alt="사진">
+                            <span>분실물</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/icon03.png" alt="사진">
+                            <span>예약하기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/icon04.png" alt="사진">
+                            <span>전화하기</span>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <!-- //link -->
+        </section>
+        <!-- //contents -->
 
         <article id="slider">
-
+            <div class="sliderWrap">
+                <div class="slider s1">
+                    <div class="text">
+                        <h3>추억을 소환하는 철길마을</h3>
+                        <p>철길마을</p>
+                    </div>
+                </div>
+                <div class="slider s2">
+                    <div class="text">
+                        <h3>추억을 소환하는 철길마을</h3>
+                        <p>철길마을</p>
+                    </div>
+                </div>
+                <div class="slider s3">
+                    <div class="text">
+                        <h3>추억을 소환하는 철길마을</h3>
+                        <p>철길마을</p>
+                    </div>
+                </div>
+            </div>
         </article>
         <!-- //slider -->
+    </main>
+    <!-- //main -->
 
-        <footer id="footer">
-            <nav class="footer1"></nav>
-            <nav class="footer2"></nav>
-            <nav class="footer3"></nav>
-        </footer>
-    </div>
+    <footer id="footer">
+        <div class="footer1"></div>
+        <div class="footer2">
+            <div class="footer2-1"></div>
+            <div class="footer2-2"></div>
+        </div>
+        <div class="footer3"></div>
+    </footer>
+    <!-- //footer -->
+</div>
+<!-- //wrap -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<body>
+
 </body>
 
 </html>
