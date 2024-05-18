@@ -19,6 +19,7 @@ li {
 img {
     width: 100%;
     vertical-align: top;
+    /* display: block; 으로 처리해도 됨 */
 }
 
 #wrap {
@@ -55,6 +56,10 @@ img {
 #header .nav {
     width: 100%;
     height: 90%;
+    position: relative;
+    z-index: 1000;
+    /* position: relative;
+    z-index: 1000; 서브메뉴가 위로 나오도록 처리 */
 }
 
 #header .nav>ul>li {
@@ -99,7 +104,6 @@ img {
 /* contents */
 #contents {
     width: 400px;
-    height: 100%;
 }
 
 /* #contents :banner */
@@ -115,7 +119,6 @@ img {
 #contents .banner h3 {
     color: #fff;
     font-size: 24px;
-    padding-right: 10px;
 }
 
 #contents .banner a {
@@ -123,6 +126,7 @@ img {
     background-color: #ca2727bc;
     padding: 10px 20px;
     border-radius: 40px;
+    margin-left: 10px;
 }
 
 #contents .banner a:hover {
@@ -199,6 +203,7 @@ img {
     padding: 20px;
     box-sizing: border-box;
     position: relative;
+    overflow: hidden;
 }
 
 #contents .gallery h3 {
@@ -218,6 +223,7 @@ img {
     width: 110px;
     height: 150px;
     background-size: cover;
+    /* <li> 요소의 너비를 110픽셀, 높이는 150픽셀로 설정 후 배경이미지 설정, background-size: cover;로 인해, 설정된 이미지가 <li>요소를 완전히 덮도록 크기자동조정 */
 }
 
 #contents .gallery li:nth-child(1) {
@@ -267,6 +273,7 @@ img {
     width: 1px;
     height: 1px;
     overflow: hidden;
+    /* 또는  display: none; 처리 */
 }
 
 #contents .link ul {
@@ -287,10 +294,10 @@ img {
     transition: all 0.3s;
 }
 
-#contents .link li a img {
+/* #contents .link li a img {
     width: 80%;
     height: auto;
-}
+} */
 
 /* slider */
 #slider {
@@ -353,6 +360,7 @@ img {
 #footer {
     width: 100%;
     display: flex;
+    background-color: #efefef;
 }
 
 #footer .footer1 {
@@ -361,13 +369,14 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fdfdfd;
-
+    background-color: #9e5555ee;
 }
 
 #footer .footer1 h4 {
-    font-size: 24px;
-    color: #979797;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
 }
 
 #footer .footer2 {
