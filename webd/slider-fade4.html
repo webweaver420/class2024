@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>웹디자인기능사 슬라이드 S-4</title>
+  <title>반응형 슬라이드/ fade효과 S-4</title>
   <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
   <style>
     * {
@@ -107,27 +107,35 @@
     /* slider */
     .sliderWrap {
       position: relative;
+      /*슬라이드 기준점*/
+      width: 100%;
       height: 100%;
     }
 
-    /* .sliderWrap>div {
+    .sliderWrap>div {
       display: none;
     }
 
     .sliderWrap>div:first-child {
-      display: block;  
-    }  /*첫번째 이미지만 보이게 처리*/
+      display: block;
+    }
 
     .sliderWrap .slider {
       position: absolute;
       left: 0;
       top: 0;
+      /* 하나의 이미지로 모아줌 기준은 sliderWrap에 처리:
+      position: absolute;
+      left: 0;
+      top: 0; */
       width: 100%;
       height: 100%;
       background-repeat: no-repeat;
-      /*이미지 하나만 나오게 처리*/
+      /*배경 이미지가 반복되지 않도록 설정*/
       background-position: center;
+      /*이미지를 요소 내 중앙에 배치*/
       background-size: cover;
+      /*이미지가 요소 전체를 덮도록 크기조절*/
     }
 
     .sliderWrap .slider.s1 {
@@ -144,11 +152,11 @@
 
     .sliderWrap .slider span {
       position: absolute;
+      /*기준점 따로 안줘도 되는지?*/
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      background-color: rgba(0, 0, 0, 0.3);
-      color: #fff;
+      background-color: rgba(255, 255, 255, 0.4);
       padding: 10px 20px;
     }
   </style>
@@ -176,6 +184,7 @@
           <div class="slider s1">
             <span>이미지1</span>
           </div>
+          <!-- 반응형일 경우 이미지는 백그라운드로 처리해주는게 작업하기 편함 -->
           <div class="slider s2">
             <span>이미지2</span>
           </div>
@@ -198,40 +207,39 @@
   </div>
   <!-- //wrap -->
 
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>
-    // $(function () {
-    //   let currentIndex = 0;
+    $(function () {
+      let currentIndex = 0;  // 초기값 설정
 
-    //   setInterval(() => {
-    //     let nextIndex = (currentIndex + 1) % 3  // 1 2 0 무한반복
+      setInterval(() => {  // 3초마다 일정하게 실행
+        let nextIndex = (currentIndex + 1) % 3  // 1 2 0 1 2 0
 
-    //     $(".slider").eq(currentIndex).fadeOut(1200);
-    //     $(".slider").eq(nextIndex).fadeIn(1200);
-
-    //     currentIndex = nextIndex;
-
-    //   }, 3000);
-    // });
-  </script>
-  <script>
-    window.onload = (function () {
-      let currentIndex = 0;
-      const slider = document.querySelectorAll(".slider");  //3개의 이미지가 선택
-      slider.forEach(el => el.style.opacity = "0");  //모든 이미지 투명도 0
-      slider[0].style.opacity = 1;  //첫번째 이미지 투명도 1
-
-      setInterval(() => {
-        let nextIndex = (currentIndex + 1) % slider.length;
-
-        slider[currentIndex].style.opacity = "0";
-        slider[nextIndex].style.opacity = "1";
-        slider.forEach(el => el.style.transition = "all 1s");
+        $(".slider").eq(currentIndex).fadeOut(1200);  // slider 클래스를 가진 요소 중에서 currentIndex에 해당하는 인덱스의 요소를 선택하여 fadeOut 메서드를 적용
+        $(".slider").eq(nextIndex).fadeIn(1200);
 
         currentIndex = nextIndex;
 
       }, 3000);
     });
+  </script>
+  <script>
+    // window.onload = function () {
+    //   let currentIndex = 0;   //현재 이미지
+    //   const slider = document.querySelectorAll(".slider"); //각각의 이미지들
+    //   slider.forEach(el => el.style.opacity = "0");   //모든 이미지 투명도 0
+    //   slider[0].style.opacity = 1;    //첫번째 이미지는 투명도 1
+
+    //   setInterval(() => {
+    //     let nextIndex = (currentIndex + 1) % slider.length;
+
+    //     slider[currentIndex].style.opacity = "0";
+    //     slider[nextIndex].style.opacity = "1";
+    //     slider.forEach(el => el.style.transition = "all 1s");
+
+    //     currentIndex = nextIndex;
+    //   }, 3000);
+    // }
   </script>
 </body>
 
