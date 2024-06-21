@@ -1,39 +1,23 @@
-// 이미지 슬라이드 위로
-
 $(function () {
-  let currentIndex = 0;  //초기값설정
-  $(".imageWrap").append($(".image").first().clone(true));  //전체이미지중 첫번째복제
+    let currentIndex = 0;  //초기
+    $(".sliderWrap").append($(".slider").first().clone(true));  //복제
+    setInterval(function () {  //3초실행
+        currentIndex++;  //증가식
+        $(".sliderWrap").animate({ marginTop: -currentIndex * 400 + "px" }, 600);  //애니
 
-  setInterval(function () {  //3초동안 일정하게 이미지1씩 증가
-    currentIndex++;
-    $(".imageWrap").animate({ marginTop: -400 * currentIndex + "px" }, 600);
+        if (currentIndex == 3) {  //이프문
+            setTimeout(function () {  //한번만실행
+                $(".sliderWrap").animate({ marginTop: 0 }, 0);  //애니
+                currentIndex = 0;  //초기
+            }, 600);
+        }
+    }, 3000);
 
-    if (currentIndex == 3) {
-      setTimeout(function () {
-        $(".imageWrap").animate({ marginTop: 0 }, 0);
-        currentIndex = 0;
-      }, 600);
-    }
-  }, 3000);
-
-  // 메뉴
-  $(".nav>ul>li").mouseover(function () {
-    $(this).find(".submenu").stop().slideDown();
-  });
-
-  $(".nav>ul>li").mouseout(function () {
-    $(this).find(".submenu").stop().slideUp();
-  });
-
-  // 팝업
-  $(".popup-btn").click(function () {
-    $(".popup-view").show();
-  });
-  $(".popup-close").click(function () {
-    $(".popup-view").hide();
-  });
+    // menu
+    $(".nav>ul>li").mouseover(function () {
+        $(this).find(".sub").stop().slideDown();
+    });
+    $(".nav>ul>li").mouseout(function () {
+        $(this).find(".sub").stop().slideUp();
+    });
 });
-
-
-
-
