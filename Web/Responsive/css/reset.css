@@ -93,16 +93,6 @@ button {
     border: 0;
 }
 
-/* IR효과 */
-.ir_pm {
-    display: block;
-    overflow: hidden;
-    font-size: 0;
-    line-height: 0;
-    text-indent: -9999px;
-    /* 의미있는 대체 텍스트를 제공하는 경우 */
-}
-
 /* margin, padding */
 .mt10 {
     margin-top: 10px !important;
@@ -138,6 +128,16 @@ button {
 
 .mt50 {
     margin-top: 50px !important;
+}
+
+/* IR효과 */
+.ir_pm {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    /* 의미있는 대체 텍스트를 제공하는 경우 */
 }
 
 .ir_wa {

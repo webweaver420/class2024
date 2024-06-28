@@ -108,10 +108,10 @@
 body {
     width: 100%;
     height: 100vh;
-    background-image: url(../img/wallpaper2.jpg);
+    font-family: var(--fontN);
+    color: #fff;
+    background: url(../img/img3.jpg) no-repeat center center;
     background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
     overflow: hidden;
 }
 
@@ -155,7 +155,6 @@ body {
     .layer {
         width: 80vw;
         height: 90vh;
-        /* background-color: #ccc; */
         position: absolute;
         left: 50%;
         top: 50%;
@@ -296,6 +295,103 @@ body {
 
 
     }
+}
+
+/* 마우스 호버 효과 */
+.main__icons .icon:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.main__icons .icon img:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.main__icons .icon span:hover {
+    color: #222;
+    transition: color 0.3s ease;
+}
+
+/* 레이어 콘텐츠에 트랜지션 효과 추가 */
+.layer__conts h3,
+.layer__conts span,
+.layer__conts p,
+.layer__conts .mail,
+.layer__conts .style1,
+.layer__conts .style2,
+.layer__conts .skill h3,
+.layer__conts .skill dt,
+.layer__conts .skill dd,
+.layer__conts .picture h3,
+.layer__conts .picture ul li img {
+    transition: all 0.3s ease;
+}
+
+/* 박스 그림자 추가 */
+.layer__conts {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 애니메이션 추가 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.layer__conts .intro h3,
+.layer__conts .intro span,
+.layer__conts .intro p,
+.layer__conts .intro .mail,
+.layer__conts .skill h3,
+.layer__conts .skill dl,
+.layer__conts .picture h3,
+.layer__conts .picture ul li {
+    animation: fadeIn 0.6s ease both;
+}
+
+.layer__conts .intro h3 {
+    animation-delay: 0.1s;
+}
+
+.layer__conts .intro span {
+    animation-delay: 0.2s;
+}
+
+.layer__conts .intro p {
+    animation-delay: 0.3s;
+}
+
+.layer__conts .intro .mail {
+    animation-delay: 0.4s;
+}
+
+.layer__conts .skill h3 {
+    animation-delay: 0.5s;
+}
+
+.layer__conts .skill dl {
+    animation-delay: 0.6s;
+}
+
+.layer__conts .picture h3 {
+    animation-delay: 0.7s;
+}
+
+.layer__conts .picture ul li {
+    animation-delay: 0.8s;
 }
 
 @media (max-width: 1200px) {
