@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+#wrap {
+    width: 1920px;
+    margin: 0 auto;
+}
+
+#header {
+    position: relative;
+    width: 100%;
+    height: 2716px;
+    background-image: url(../img/mainimage.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#header .logo {
+    font-family: 'Poppins';
+    padding: 10px 30px;
+}
+
+#header .logo a {
+    display: block;
+}
+
+#header .logo a span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#header .logo a em {
+    font-style: normal;
+    font-size: 24px;
+    font-weight: lighter;
+    letter-spacing: 17px;
+    padding-top: -10px;
+}
+
+#header .nav {
+    display: flex;
+    justify-content: right;
+    margin-top: -100px;
+    font-family: 'Poppins';
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 10px 30px;
+}
+
+#header .vision {
+    position: absolute;
+    left: 50px;
+    top: 500px;
+}
+
+#header .vision p {
+    font-family: 'IropkeBatang';
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#header .main-title {
+    position: absolute;
+    left: 50px;
+    top: 650px;
+    font-family: 'GmarketSans';
+    font-size: 200px;
+    font-weight: lighter;
+}
+
+#contents1 {
+    position: relative;
+    width: 100%;
+    height: 4410px;
+    background-color: #333;
+}
+
+#contents1 h2 {
+    font-family: 'Poppins';
+    font-size: 300px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: -0.0715em;
+    /* 글자 간격 좁히기 */
+    padding-top: 344px;
+    padding-left: 43px;
+}
+
+#contents1 .img1 a {
+    display: inline-block;
+}
+
+#contents1 .img1 a img {
+    position: absolute;
+    left: 66px;
+    top: 600px;
+    width: 848px;
+    height: 1174px;
+    /* height: auto; */
+}
+
+#contents1 .text1 h3 {
+    position: absolute;
+    left: 1076px;
+    top: 896px;
+    font-family: 'Italiana';
+    font-size: 50px;
+}
+
+#contents1 .text1 p {
+    position: absolute;
+    left: 1200px;
+    top: 1000px;
+    font-family: 'NanumSquareNeo';
+    font-size: 18px;
+    letter-spacing: -0.09em;
+}
+
+#contents1 .text1 .view-link1 {
+    position: absolute;
+    right: 104px;
+    top: 1200px;
+    font-family: 'Poppins';
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-decoration-line: underline;
+    text-underline-offset: 10px;
+    /* 밑줄과 글자 간 간격 설정 */
+    text-decoration-skip-ink: none;
+    /* 글자와 밑줄이 겹치지 않도록 설정 */
+}
+
+
+
+
+#contents1 .img2 a {
+    display: block;
+}
+
+#contents1 .img2 a img {
+    position: absolute;
+    right: 151px;
+    top: 2000px;
+    width: 615px;
+    height: 924px;
+    /* height: auto; */
+}
+
+#contents1 .text2 {}
+
+#contents1 .text2 h3 {
+    position: absolute;
+    left: 803px;
+    top: 2600px;
+    font-family: 'Italiana';
+    font-size: 50px;
+}
+
+#contents1 .text2 p {
+    position: absolute;
+    left: 572px;
+    top: 2704px;
+    font-family: 'NanumSquareNeo';
+    font-size: 18px;
+    letter-spacing: -0.09em;
+    text-align: right;
+}
+
+#contents1 .text2 .view-link2 {
+    position: absolute;
+    left: 1000px;
+    top: 2904px;
+    font-family: 'Poppins';
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-decoration-line: underline;
+    text-underline-offset: 10px;
+    /* 밑줄과 글자 간 간격 설정 */
+    text-decoration-skip-ink: none;
+    /* 글자와 밑줄이 겹치지 않도록 설정 */
+}
+
+
+#contents2 {
+    position: relative;
+    width: 100%;
+    height: 1338px;
+    background-color: #444;
+}
+
+#contents3 {
+    width: 100%;
+    height: 4705px;
+    background-color: #555;
+}
+
+#footer {
+    width: 100%;
+    height: 1080px;
+    background-color: #666;
+}

@@ -110,7 +110,7 @@ body {
     height: 100vh;
     font-family: var(--fontN);
     color: #fff;
-    background: url(../img/img3.jpg) no-repeat center center;
+    background: url(../img/wall2.jpg) no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }

@@ -663,8 +663,25 @@
             filter: sepia(120%) hue-rotate(120deg);
         }
 
+        /* mediaquery */
+        /* 라이트 박스 */
+        .square a {
+            float: left;
+            width: 19%;
+            margin: 0.5%;
+        }
 
+        .square a img {
+            width: 100%;
+            display: block;
+        }
 
+        .square a em {
+            background: rgba(0, 0, 0, 0.77);
+            color: #fff;
+            width: 100%;
+            text-align: center;
+        }
 
 
         /* mediaquery */
