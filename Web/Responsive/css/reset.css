@@ -84,8 +84,9 @@
             border: 0;
         }
 
-        /* 반응형 */
-        img {
+        /* 반응형 이미지 */
+        img,
+        video {
             width: 100%;
         }
 
