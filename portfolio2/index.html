@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
 
-    <!-- css -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-
     <!-- web font -->
     <link href="https://webfontworld.github.io/iropke/IropkeBatang.css" rel="stylesheet">
     <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
@@ -19,12 +15,87 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
         rel="stylesheet">
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #333;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: baseline;
+            justify-content: space-between;
+        }
+
+        #header h1 {
+            font-family: 'Poppins';
+            line-height: 0.7;
+            padding: 1rem 2rem;
+            display: block;
+        }
+
+        #header h1 span {
+            color: #fff;
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: block;
+
+
+        }
+
+        #header h1 em {
+            font-style: normal;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 200;
+            letter-spacing: 1rem;
+            text-transform: uppercase;
+        }
+
+        #header nav {
+            display: flex;
+            justify-content: right;
+            color: #fff;
+            font-size: 30px;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 0.5rem 2rem;
+        }
+
+        #intro-text {
+            background-image: url(img/mainimage.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100vw;
+            height: 300vh;
+        }
+
+        #intro-text p {
+            font-family: 'IropkeBatang';
+            font-size: 16px;
+        }
+
+        #intro-text .text {}
+
+        #intro-text .text h2 {}
+
+        #intro-text .more {}
+    </style>
+
 </head>
 
 <body>
     <header id="header">
         <h1>
-            <span>design+coding<br></span><em>portfolio</em>
+            <span>design+coding</span><em>portfolio</em>
         </h1>
         <nav>menu</nav>
     </header>
@@ -34,43 +105,50 @@
         <p>어떤 일이라도 노력하고 즐기면 그 결과는 빛을 발한다고 생각합니다.<br>
             신입의 열정과 도전정신을 깊숙히 새기고, 배움에 있어 겸손함을<br>
             유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.</p>
-        <h2>Design<br>Coding<br>Experience</h2>
-        <a href="#" class="more">더보기</a>
+        <div class="text">
+            <h2>Design<br>Coding<br>Experience</h2>
+        </div>
+        <a href="#" class="more"></a>
     </section>
     <!-- //intro-text -->
-    <section id="contents1">
-        <div class="cont-left">
-            <a href="#"><img src="img/designimg01.jpg" alt="웹디자인이미지"></a>
+
+    <section id="section1">
+        <h2>design</h2>
+        <div class="article1">
+            <div class="left">
+                <div class="img"></div>
+            </div>
+            <div class="right">
+                <h3>webstandard</h3>
+                <p>저는 디자인과 코딩을 통해 창의성과 기술을 결합하여 사용자들에게<br>
+                    뛰어난 경험을 제공하는 것을 목표로 하고 있습니다.</p>
+                <a href="#" class="btn">view</a>
+            </div>
         </div>
-        <div class="cont-right">
-            <h3>webstandard</h3>
-            <p>저는 디자인과 코딩을 통해 창의성과 기술을 결합하여 사용자들에게<br>
-                뛰어난 경험을 제공하는 것을 목표로 하고 있습니다.</p>
-            <span><a href="#" class="btn">view</a></span>
+        <div class="article2">
+            <div class="left">
+                <h3>webstandard</h3>
+                <p>저는 디자인과 코딩을 통해 창의성과 기술을 결합하여 사용자들에게<br>
+                    뛰어난 경험을 제공하는 것을 목표로 하고 있습니다.</p>
+                <a href="#" class="btn">view</a>
+            </div>
+            <div class="right">
+                <div class="img"></div>
+            </div>
+        </div>
+        <div class="article3">
+            <div class="left">
+                <div class="img"></div>
+            </div>
+            <div class="right">
+                <h3>webstandard</h3>
+                <p>Visual Studio Code를 활용한 자바스크립트 개발, 패럴럭스 이펙트 구현, 이미지 슬라이드 제작 등<br>
+                    다양한 프로젝트를 통해 쌓아온 경험과 열정을 바탕으로 항상 최고의 결과를 추구하고 있습니다.</p>
+                <a href="#" class="btn">view</a>
+            </div>
         </div>
     </section>
-    <section id="contents2">
-        <div class="cont-left">
-            <h3>webstandard</h3>
-            <p>웹 표준을 준수하는 전문가로서, 최신 기술과 모범 사례를 따르며,<br>
-                접근성 높고 효율적이며 지속 가능성을 고려한 프로젝트를 추구합니다.</p>
-            <a href="#" class="btn">view</a>
-        </div>
-        <div class="cont-right">
-            <a href="#"><img src="img/designimg02.jpg" alt="웹디자인이미지"></a>
-        </div>
-    </section>
-    <section id="contents3">
-        <div class="cont-left">
-            <a href="#"><img src="img/designimg03.jpg" alt="웹디자인이미지"></a>
-        </div>
-        <div class="cont-right">
-            <h3>webstandard</h3>
-            <p>Visual Studio Code를 활용한 자바스크립트 개발, 패럴럭스 이펙트 구현, 이미지 슬라이드 제작 등<br>
-                다양한 프로젝트를 통해 쌓아온 경험과 열정을 바탕으로 항상 최고의 결과를 추구하고 있습니다.</p>
-            <a href="#" class="btn">view</a>
-        </div>
-    </section>
+    <!-- //section1 -->
 
 </body>
 

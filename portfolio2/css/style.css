@@ -14,6 +14,7 @@
     justify-content: space-between;
     /* 양 끝에 요소 배치하고, 나머지 공간 균등 분배 */
 
+
 }
 
 #header h1 {
@@ -27,6 +28,8 @@
 #header h1 span {
     font-size: 30px;
     font-weight: 900;
+    /* justify-content: space-between; */
+
 }
 
 #header h1 em {
@@ -46,6 +49,7 @@
 }
 
 #intro-text {
+    position: relative;
     background-image: url(../img/mainimage.jpg);
     background-size: cover;
     background-position: center;
@@ -63,7 +67,7 @@
     letter-spacing: 0.1rem;
 }
 
-#intro-text h2 {
+#intro-text .text h2 {
     font-family: 'GmarketSans';
     font-size: 200px;
     font-weight: 200;
@@ -77,119 +81,18 @@
 #intro-text .more {}
 
 /* 컨텐츠영역 */
-#contents1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
+#section1 {}
 
-#contents1 .cont-left {
-    width: 50%;
-    height: auto;
-    padding-top: 60vh;
+#section1 h2 {}
 
-}
+#section1 .article1 .left {}
 
-#contents1 .cont-right {
-    width: 50%;
-    height: auto;
-}
+#section1 .article1 .left img {}
 
-#contents1 .cont-right h3 {
-    font-family: 'Italiana';
-    font-size: 50px;
-    color: #333;
-    display: block;
-    padding-left: 20rem;
-    text-align: right;
+#section1 .article1 .right {}
 
-}
+#section1 .article1 .right h3 {}
 
-#contents1 .cont-right p {
-    font-family: 'NanumSquareNeo';
-    font-size: 18px;
-    color: #333;
-    padding-top: 2.75rem;
-    margin-left: 4rem;
-    display: block;
-}
+#section1 .article1 .right p {}
 
-#contents1 .cont-right .btn {
-    font-family: 'Poppins';
-    color: #333;
-    font-size: 18px;
-    text-decoration: underline;
-    display: block;
-    padding-top: 5rem;
-    text-underline-offset: 15px;
-    /* 글자와 밑줄 사이 간격 설정 */
-    display: flex;
-    justify-content: right;
-    text-align: right;
-    margin-right: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 1rem;
-}
-
-#contents2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20vh;
-    overflow: hidden;
-}
-
-#contents2 .cont-left {
-    width: 70%;
-    height: auto;
-    padding-right: 2rem;
-}
-
-#contents2 .cont-left h3 {
-    font-family: 'Italiana';
-    font-size: 50px;
-    color: #333;
-    display: block;
-    padding-left: 20rem;
-
-}
-
-#contents2 .cont-left p {
-    font-family: 'NanumSquareNeo';
-    font-size: 18px;
-    color: #333;
-    padding-top: 2.75rem;
-    display: block;
-    padding-left: 10rem;
-
-}
-
-#contents2 .cont-left .btn {
-    font-family: 'Poppins';
-    color: #333;
-    font-size: 18px;
-    text-decoration: underline;
-    display: block;
-    padding-top: 37rem;
-    text-underline-offset: 15px;
-    /* 글자와 밑줄 사이 간격 설정 */
-    display: flex;
-    justify-content: right;
-    margin-right: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 1rem;
-}
-
-#contents2 .cont-right {
-    width: 30%;
-    height: auto;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    padding-right: 7rem;
-}
-
-#contents2 .cont-right a {
-    display: block;
-}
+#section1 .article1 .right .btn {}

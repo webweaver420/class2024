@@ -1,0 +1,227 @@
+@charset "UTF-8";
+
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+#header h1 {
+    font-family: 'Poppins';
+    color: #fff;
+    line-height: 0.5;
+}
+
+#header h1 span {
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: block;
+}
+
+#header h1 em {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 11px;
+}
+
+#header nav {
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+#section1 {
+    height: 200vh;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 60px;
+    line-height: 1;
+    overflow: hidden;
+}
+
+#section1 p {
+    font-family: 'Iropke Batang';
+    width: 400px;
+    line-height: 1.5;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 20vh;
+    margin-left: 4vw;
+}
+
+#section1 .text>div {
+    font-family: 'gmarket';
+    font-size: 10vw;
+    color: #fff;
+    font-weight: 300;
+    margin-left: 3vw;
+    margin-top: 2vw;
+    line-height: 0.9;
+}
+
+@media (max-width: 640px) {
+    #section1 {
+        height: 100vh;
+    }
+
+    #section1 p {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 13vw;
+        word-break: keep-all;
+        margin-bottom: 13vw;
+    }
+
+    #section1 .text>div {
+        text-align: center;
+        padding: 1vw;
+    }
+}
+
+
+
+#section2 {
+    width: 100%;
+    background-color: #fff;
+    padding: 20vw 5vw 5vw 5vw;
+}
+
+#section2 h2 {
+    font-family: 'Poppins';
+    font-weight: 100;
+    font-size: 14.1vw;
+    text-transform: uppercase;
+    line-height: 0.3;
+    margin-left: -1.2vw;
+}
+
+#section2 .article1 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+#section2 .article1 .left {
+    width: 50%;
+}
+
+#section2 .article1 .left .imgWrap {
+    width: 100%;
+    height: 80vh;
+}
+
+#section2 .article1 .left .imgWrap .img {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/design-bg1@2x.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+#section2 .article1 .right {
+    width: 50%;
+    padding-left: 5%;
+}
+
+#section2 .text h3 {
+    font-size: 40px;
+    margin-bottom: 0.8rem;
+    font-family: 'Italiana';
+    margin-top: 30vh;
+}
+
+#section2 .text p {
+    font-family: "nanumSquareNeo";
+    font-size: 13px;
+    margin-bottom: 1.4em;
+    line-height: 1.6;
+}
+
+#section2 .text a {
+    font-family: 'Poppins';
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
+    padding-right: 80px;
+    padding-bottom: 0.5rem;
+    font-size: 14px;
+    letter-spacing: 0.7vw;
+}
+
+#section2 .article2 {
+    width: 100%;
+    display: flex;
+    height: 70vh;
+    margin-bottom: 100px;
+}
+
+#section2 .article2 .left {
+    width: 60%;
+    height: 100%;
+    text-align: right;
+    padding-right: 5%;
+}
+
+#section2 .article2 .right {
+    width: 40%;
+    height: 100%;
+    background-image: url(../img/design-bg2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+#section2 .article3 {
+    width: 100%;
+    height: 50vh;
+    background-color: #444;
+    display: flex;
+}
+
+#section2 .article3 .left {
+    width: 50%;
+    height: 100%;
+    background-color: #c1c1c1;
+}
+
+#section2 .article3 .right {}
+
+
+@media (max-width: 900px) {
+    #section2 .article1 {
+        flex-direction: column;
+    }
+
+    #section2 .article1 .left {
+        width: 100%;
+        height: auto;
+    }
+
+    #section2 .article1 .left .imgWrap {
+        width: 100%;
+        height: 40vh;
+    }
+
+    #section2 .article1 .right {
+        width: 100%;
+        height: auto;
+    }
+
+    #section2 .article1 .right h3 {
+        margin-top: 5vw;
+    }
+}
